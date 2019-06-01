@@ -32,6 +32,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bogus, Version=27.0.1.0, Culture=neutral, PublicKeyToken=fa1bb3f3f218129a">
+      <HintPath>..\packages\Bogus.27.0.1\lib\net40\Bogus.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
@@ -40,6 +44,7 @@
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -49,13 +54,24 @@
   <ItemGroup>
     <Compile Include="AirportContext.cs" />
     <Compile Include="AirportInitializer.cs" />
+    <Compile Include="Models\Airline.cs" />
+    <Compile Include="Models\Airport.cs" />
+    <Compile Include="Models\CheckInStaff.cs" />
+    <Compile Include="Models\Dimension.cs" />
+    <Compile Include="Models\Flight.cs" />
+    <Compile Include="Models\FlightStaff.cs" />
     <Compile Include="Models\IdentificationDocument.cs" />
+    <Compile Include="Models\Luggage.cs" />
     <Compile Include="Models\Passenger.cs" />
     <Compile Include="Models\PassengerReservation.cs" />
     <Compile Include="Models\Person.cs" />
+    <Compile Include="Models\Pilot.cs" />
+    <Compile Include="Models\Plane.cs" />
     <Compile Include="Models\RegularCustomerCard.cs" />
     <Compile Include="Models\Reservation.cs" />
     <Compile Include="Models\Staff.cs" />
+    <Compile Include="Models\Stewardess.cs" />
+    <Compile Include="Models\Technician.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

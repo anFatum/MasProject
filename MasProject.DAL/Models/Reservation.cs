@@ -11,6 +11,15 @@ namespace MasProject.DAL.Models
         Urgent
     }
 
+    public enum ReservationState
+    {
+        InProgress,
+        WaitingForPayment,
+        Cancelled,
+        Refunded,
+        Done
+    }
+
     public class Reservation
     {
         [Key] public int ReservationId { get; set; }
@@ -18,10 +27,12 @@ namespace MasProject.DAL.Models
         [Required] public DateTime DateOfReservation { get; set; }
         [Required] public double Price { get; set; }
         [Required] public ReservationType ReservationType { get; set; }
-        
+        [Required] public ReservationState ReservationState { get; set; }
+
         public virtual User User { get; set; }
-        
-        public ICollection<PassengerReservation> PassengerReservations { get; set; }
-        
+        public virtual Flight Flight { get; set; }
+
+        public virtual ICollection<PassengerReservation> PassengerReservations { get; set; }
+        public virtual ICollection<Luggage> Luggage { get; set; }
     }
 }

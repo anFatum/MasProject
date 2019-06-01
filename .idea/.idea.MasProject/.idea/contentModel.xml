@@ -23,13 +23,24 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="MasProject.DAL.csproj" t="IncludeRecursive" />
         <e p="Models" t="Include">
+          <e p="Airline.cs" t="Include" />
+          <e p="Airport.cs" t="Include" />
+          <e p="CheckInStaff.cs" t="Include" />
+          <e p="Dimension.cs" t="Include" />
+          <e p="Flight.cs" t="Include" />
+          <e p="FlightStaff.cs" t="Include" />
           <e p="IdentificationDocument.cs" t="Include" />
+          <e p="Luggage.cs" t="Include" />
           <e p="Passenger.cs" t="Include" />
           <e p="PassengerReservation.cs" t="Include" />
           <e p="Person.cs" t="Include" />
+          <e p="Pilot.cs" t="Include" />
+          <e p="Plane.cs" t="Include" />
           <e p="RegularCustomerCard.cs" t="Include" />
           <e p="Reservation.cs" t="Include" />
           <e p="Staff.cs" t="Include" />
+          <e p="Stewardess.cs" t="Include" />
+          <e p="Technician.cs" t="Include" />
           <e p="User.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive" />

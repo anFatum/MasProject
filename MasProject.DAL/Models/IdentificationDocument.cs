@@ -18,6 +18,6 @@ namespace MasProject.DAL.Models
         [Required] public DocumentType DocumentType { get; set; }
         [Required] public DateTime ExpirationDate { get; set; }
         public string PassportSeries { get; set; }
-        [Required] public string DocumentNumber { get; set; }
+        [Required][MaxLength(16)] public string DocumentNumber { get; set; }
     }
 }

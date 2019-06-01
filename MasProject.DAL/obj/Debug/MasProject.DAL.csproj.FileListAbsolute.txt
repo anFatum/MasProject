@@ -10,3 +10,6 @@
 /Users/andud/RiderProjects/MasProject/MasProject.DAL/obj/Debug/MasProject.DAL.exe
 /Users/andud/RiderProjects/MasProject/MasProject.DAL/obj/Debug/MasProject.DAL.pdb
 /Users/andud/RiderProjects/MasProject/MasProject.DAL/obj/Debug/MasProject.DAL.csprojAssemblyReference.cache
+/Users/andud/RiderProjects/MasProject/MasProject.DAL/bin/Debug/Bogus.dll
+/Users/andud/RiderProjects/MasProject/MasProject.DAL/bin/Debug/Bogus.pdb
+/Users/andud/RiderProjects/MasProject/MasProject.DAL/bin/Debug/Bogus.xml

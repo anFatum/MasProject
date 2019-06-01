@@ -1,0 +1,8 @@
+/Users/andud/RiderProjects/MasProject/MasProject.DAL/obj/Debug/.NETFramework,Version=v4.7.1.AssemblyAttribute.cs
+/Users/andud/RiderProjects/MasProject/MasProject.DAL/bin/Debug/MasProject.DAL.exe.config
+/Users/andud/RiderProjects/MasProject/MasProject.DAL/bin/Debug/MasProject.DAL.pdb
+/Users/andud/RiderProjects/MasProject/MasProject.DAL/bin/Debug/MasProject.DAL.exe
+/Users/andud/RiderProjects/MasProject/MasProject.DAL/obj/Debug/MasProject.DAL.exe
+/Users/andud/RiderProjects/MasProject/MasProject.DAL/obj/Debug/MasProject.DAL.pdb
+/Users/andud/RiderProjects/MasProject/MasProject.DAL/bin/Debug/EntityFramework.dll
+/Users/andud/RiderProjects/MasProject/MasProject.DAL/bin/Debug/EntityFramework.SqlServer.dll

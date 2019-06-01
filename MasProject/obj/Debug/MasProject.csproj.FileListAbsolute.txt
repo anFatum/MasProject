@@ -1,0 +1,12 @@
+/Users/andud/RiderProjects/MasProject/MasProject/bin/Debug/MasProject.exe.config
+/Users/andud/RiderProjects/MasProject/MasProject/bin/Debug/MasProject.exe
+/Users/andud/RiderProjects/MasProject/MasProject/bin/Debug/MasProject.pdb
+/Users/andud/RiderProjects/MasProject/MasProject/bin/Debug/EntityFramework.dll
+/Users/andud/RiderProjects/MasProject/MasProject/bin/Debug/EntityFramework.SqlServer.dll
+/Users/andud/RiderProjects/MasProject/MasProject/bin/Debug/EntityFramework.xml
+/Users/andud/RiderProjects/MasProject/MasProject/bin/Debug/EntityFramework.SqlServer.xml
+/Users/andud/RiderProjects/MasProject/MasProject/obj/Debug/MasProject.csprojAssemblyReference.cache
+/Users/andud/RiderProjects/MasProject/MasProject/obj/Debug/MasProject.csproj.CoreCompileInputs.cache
+/Users/andud/RiderProjects/MasProject/MasProject/obj/Debug/MasProject.csproj.CopyComplete
+/Users/andud/RiderProjects/MasProject/MasProject/obj/Debug/MasProject.exe
+/Users/andud/RiderProjects/MasProject/MasProject/obj/Debug/MasProject.pdb

@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fccff208-74da-47ab-8924-a44ead61cbb8" name="Default Changelist" comment="" />
+    <list default="true" id="fccff208-74da-47ab-8924-a44ead61cbb8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.MasProject/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MasProject.DAL/Models/PassengerReservation.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MasProject.DAL/Models/RegularCustomerCard.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MasProject.DAL/Models/Reservation.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MasProject.DAL/Models/Staff.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MasProject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MasProject/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MasProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MasProject/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MasProject.DAL/AirportContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MasProject.DAL/AirportContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MasProject.DAL/App.config" beforeDir="false" afterPath="$PROJECT_DIR$/MasProject.DAL/App.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MasProject.DAL/MasProject.DAL.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MasProject.DAL/MasProject.DAL.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MasProject.DAL/Models/Passenger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MasProject.DAL/Models/Passenger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MasProject.DAL/Models/Person.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MasProject.DAL/Models/Person.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MasProject.DAL/Models/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MasProject.DAL/Models/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MasProject.DAL/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MasProject.DAL/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MasProject.DAL/bin/Debug/MasProject.DAL.exe" beforeDir="false" afterPath="$PROJECT_DIR$/MasProject.DAL/bin/Debug/MasProject.DAL.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MasProject.DAL/bin/Debug/MasProject.DAL.exe.config" beforeDir="false" afterPath="$PROJECT_DIR$/MasProject.DAL/bin/Debug/MasProject.DAL.exe.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MasProject.DAL/bin/Debug/MasProject.DAL.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MasProject.DAL/bin/Debug/MasProject.DAL.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MasProject.DAL/obj/Debug/MasProject.DAL.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MasProject.DAL/obj/Debug/MasProject.DAL.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MasProject.DAL/obj/Debug/MasProject.DAL.exe" beforeDir="false" afterPath="$PROJECT_DIR$/MasProject.DAL/obj/Debug/MasProject.DAL.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MasProject.DAL/obj/Debug/MasProject.DAL.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MasProject.DAL/obj/Debug/MasProject.DAL.pdb" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,14 +32,126 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MasProject/Program.cs">
+        <entry file="file://$PROJECT_DIR$/MasProject.DAL/App.config">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+            <state relative-caret-position="349">
+              <caret line="24" column="52" lean-forward="true" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MasProject.DAL/Models/Person.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="13" column="56" selection-start-line="13" selection-start-column="56" selection-end-line="13" selection-end-column="56" />
               <folding>
-                <marker date="1559405727772" expanded="true" signature="20:130" ph="{...}" />
-                <marker date="1559405727772" expanded="true" signature="49:128" ph="{...}" />
-                <marker date="1559405727772" expanded="true" signature="102:122" ph="{...}" />
+                <marker date="1559414815712" expanded="false" signature="6:96" ph="..." />
+                <marker date="1559414815712" expanded="true" signature="129:630" ph="{...}" />
+                <marker date="1559414815712" expanded="true" signature="155:628" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MasProject.DAL/AirportContext.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="60" selection-start-line="60" selection-end-line="60" />
+              <folding>
+                <marker date="1559416803560" expanded="false" signature="6:54" ph="..." />
+                <marker date="1559416803560" expanded="true" signature="80:2041" ph="{...}" />
+                <marker date="1559416803560" expanded="true" signature="126:2039" ph="{...}" />
+                <marker date="1559416803560" expanded="true" signature="189:288" ph="{...}" />
+                <marker date="1559416803560" expanded="true" signature="558:2033" ph="{...}" />
+                <marker date="1559416803560" expanded="true" signature="581:765" ph="Primary Keys Constraints" />
+                <marker date="1559416803560" expanded="true" signature="779:1812" ph="Assoctiations" />
+                <marker date="1559416803560" expanded="true" signature="1826:2023" ph="Unique Constraints" />
+                <marker date="1559416803560" expanded="true" signature="1854:1999" ph="/* modelBuilder.Entity&lt;IdentificationDocument&gt;() ... */" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MasProject.DAL/Models/PassengerReservation.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="128">
+              <caret line="8" column="58" selection-start-line="8" selection-start-column="58" selection-end-line="8" selection-end-column="58" />
+              <folding>
+                <marker date="1559415775249" expanded="true" signature="31:296" ph="{...}" />
+                <marker date="1559415775249" expanded="true" signature="71:294" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MasProject.DAL/Models/RegularCustomerCard.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="128">
+              <caret line="8" column="55" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
+              <folding>
+                <marker date="1559413822904" expanded="true" signature="77:290" ph="{...}" />
+                <marker date="1559413822904" expanded="true" signature="116:288" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MasProject.DAL/Models/Staff.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="128">
+              <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+              <folding>
+                <marker date="1559415032103" expanded="true" signature="6:110" ph="..." />
+                <marker date="1559415032103" expanded="true" signature="143:530" ph="{...}" />
+                <marker date="1559415032103" expanded="true" signature="168:528" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MasProject.DAL/Models/Passenger.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="12" column="84" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="12" selection-end-column="84" />
+              <folding>
+                <marker date="1559415896667" expanded="true" signature="6:130" ph="..." />
+                <marker date="1559415896667" expanded="true" signature="163:522" ph="{...}" />
+                <marker date="1559415896667" expanded="true" signature="192:520" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MasProject.DAL/Models/User.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="128">
+              <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+              <folding>
+                <marker date="1559416048919" expanded="true" signature="6:156" ph="..." />
+                <marker date="1559416048919" expanded="true" signature="189:592" ph="{...}" />
+                <marker date="1559416048919" expanded="true" signature="213:590" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MasProject.DAL/Models/Reservation.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="23" column="84" selection-start-line="23" selection-start-column="84" selection-end-line="23" selection-end-column="84" />
+              <folding>
+                <marker date="1559415933043" expanded="true" signature="6:92" ph="..." />
+                <marker date="1559415933043" expanded="true" signature="125:719" ph="{...}" />
+                <marker date="1559415933043" expanded="true" signature="159:214" ph="{...}" />
+                <marker date="1559415933043" expanded="true" signature="244:717" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -27,7 +160,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MasProject.DAL/Models/IdentificationDocument.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
+            <state relative-caret-position="252">
               <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
               <folding>
                 <marker date="1559406846804" expanded="false" signature="6:110" ph="..." />
@@ -39,111 +172,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MasProject.DAL/App.config">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="12" column="36" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MasProject.DAL/Program.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="12" column="62" selection-start-line="12" selection-start-column="62" selection-end-line="12" selection-end-column="62" />
-              <folding>
-                <marker date="1559406379064" expanded="true" signature="39:404" ph="{...}" />
-                <marker date="1559406379064" expanded="true" signature="68:402" ph="{...}" />
-                <marker date="1559406379064" expanded="true" signature="121:396" ph="{...}" />
-                <marker date="1559406379064" expanded="true" signature="199:386" ph="{...}" />
-                <marker date="1559406379064" expanded="true" signature="271:372" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MasProject.DAL/Models/Person.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="12" column="24" lean-forward="true" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-              <folding>
-                <marker date="1559405746734" expanded="false" signature="6:96" ph="..." />
-                <marker date="1559405746734" expanded="true" signature="129:534" ph="{...}" />
-                <marker date="1559405746734" expanded="true" signature="155:532" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MasProject.DAL/AirportContext.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="9" column="78" selection-start-line="9" selection-start-column="78" selection-end-line="9" selection-end-column="78" />
-              <folding>
-                <marker date="1559407268766" expanded="false" signature="6:54" ph="..." />
-                <marker date="1559407268766" expanded="true" signature="80:723" ph="{...}" />
-                <marker date="1559407268766" expanded="true" signature="126:721" ph="{...}" />
-                <marker date="1559407268766" expanded="true" signature="189:288" ph="{...}" />
-                <marker date="1559407268766" expanded="true" signature="558:715" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MasProject.DAL/AirportInitializer.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-              <folding>
-                <marker date="1559407373365" expanded="true" signature="6:68" ph="..." />
-                <marker date="1559407373365" expanded="true" signature="94:652" ph="{...}" />
-                <marker date="1559407373365" expanded="true" signature="183:650" ph="{...}" />
-                <marker date="1559407373365" expanded="true" signature="250:644" ph="{...}" />
-                <marker date="1559407373365" expanded="true" signature="321:545" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MasProject.DAL/Models/Passenger.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-              <folding>
-                <marker date="1559405746738" expanded="false" signature="6:96" ph="..." />
-                <marker date="1559405746738" expanded="true" signature="129:383" ph="{...}" />
-                <marker date="1559405746738" expanded="true" signature="158:381" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/MasProject.DAL/Models/User.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-              <folding>
-                <marker date="1559407373372" expanded="true" signature="31:78" ph="{...}" />
-                <marker date="1559407373372" expanded="true" signature="55:76" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/MasProject.DAL/Models/User.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MasProject.DAL/Models/RegularCustomerCard.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MasProject.DAL/Models/Staff.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MasProject.DAL/Models/Reservation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MasProject.DAL/Models/PassengerReservation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MasProject.DAL/App.config" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MasProject.DAL/AirportContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MasProject.DAL/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MasProject.DAL/Models/User.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MasProject.DAL/App.config" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MasProject.DAL/Models/Person.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MasProject.DAL/AirportInitializer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MasProject/Program.cs" root0="FORCE_HIGHLIGHTING" />
@@ -153,12 +195,18 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/MasProject.DAL/Program.cs" />
         <option value="$PROJECT_DIR$/MasProject.DAL/Models/IdentificationDocument.cs" />
+        <option value="$PROJECT_DIR$/MasProject.DAL/Program.cs" />
         <option value="$PROJECT_DIR$/MasProject.DAL/App.config" />
-        <option value="$PROJECT_DIR$/MasProject.DAL/AirportContext.cs" />
         <option value="$PROJECT_DIR$/MasProject.DAL/AirportInitializer.cs" />
+        <option value="$PROJECT_DIR$/MasProject.DAL/Models/RegularCustomerCard.cs" />
+        <option value="$PROJECT_DIR$/MasProject.DAL/Models/Person.cs" />
+        <option value="$PROJECT_DIR$/MasProject.DAL/Models/Staff.cs" />
+        <option value="$PROJECT_DIR$/MasProject.DAL/Models/PassengerReservation.cs" />
+        <option value="$PROJECT_DIR$/MasProject.DAL/Models/Passenger.cs" />
+        <option value="$PROJECT_DIR$/MasProject.DAL/Models/Reservation.cs" />
         <option value="$PROJECT_DIR$/MasProject.DAL/Models/User.cs" />
+        <option value="$PROJECT_DIR$/MasProject.DAL/AirportContext.cs" />
       </list>
     </option>
   </component>
@@ -166,6 +214,9 @@
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="873" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator currentView="SolutionExplorer" proportions="" version="1">
@@ -272,12 +323,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1559405701935</updated>
-      <workItem from="1559405703440" duration="1572000" />
+      <workItem from="1559405703440" duration="5126000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1572000" />
+    <option name="totallyTimeSpent" value="5126000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -293,21 +344,21 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="NuGet" weight="0.3290653" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Entity Framework" sideWeight="0.5078684" side_tool="true" visible="true" weight="0.3290653" />
+      <window_info anchor="bottom" id="Entity Framework" sideWeight="0.5107296" side_tool="true" visible="true" weight="0.3290653" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Unit Tests" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Performance Profiler" />
-      <window_info anchor="bottom" id="Build" sideWeight="0.49213162" weight="0.3290653" />
+      <window_info anchor="bottom" id="Build" sideWeight="0.4892704" weight="0.3290653" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49213162" visible="true" weight="0.3290653" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4892704" visible="true" weight="0.3290653" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -348,35 +399,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MasProject.DAL/Models/Person.cs">
+    <entry file="file://$PROJECT_DIR$/MasProject.DAL/Program.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
-          <caret line="12" column="24" lean-forward="true" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+          <caret line="10" column="54" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
           <folding>
-            <marker date="1559405746734" expanded="false" signature="6:96" ph="..." />
-            <marker date="1559405746734" expanded="true" signature="129:534" ph="{...}" />
-            <marker date="1559405746734" expanded="true" signature="155:532" ph="{...}" />
+            <marker date="1559409466981" expanded="true" signature="39:687" ph="{...}" />
+            <marker date="1559409466981" expanded="true" signature="68:685" ph="{...}" />
+            <marker date="1559409466981" expanded="true" signature="121:679" ph="{...}" />
+            <marker date="1559409466981" expanded="true" signature="482:669" ph="{...}" />
+            <marker date="1559409466981" expanded="true" signature="554:655" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MasProject.DAL/Program.cs">
+    <entry file="file://$PROJECT_DIR$/MasProject.DAL/App.config">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="12" column="62" selection-start-line="12" selection-start-column="62" selection-end-line="12" selection-end-column="62" />
-          <folding>
-            <marker date="1559406379064" expanded="true" signature="39:404" ph="{...}" />
-            <marker date="1559406379064" expanded="true" signature="68:402" ph="{...}" />
-            <marker date="1559406379064" expanded="true" signature="121:396" ph="{...}" />
-            <marker date="1559406379064" expanded="true" signature="199:386" ph="{...}" />
-            <marker date="1559406379064" expanded="true" signature="271:372" ph="{...}" />
-          </folding>
+        <state relative-caret-position="349">
+          <caret line="24" column="52" lean-forward="true" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MasProject.DAL/Models/IdentificationDocument.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
+        <state relative-caret-position="252">
           <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
           <folding>
             <marker date="1559406846804" expanded="false" signature="6:110" ph="..." />
@@ -387,23 +433,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MasProject.DAL/App.config">
+    <entry file="file://$PROJECT_DIR$/MasProject.DAL/Models/Person.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="12" column="36" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MasProject.DAL/AirportContext.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="9" column="78" selection-start-line="9" selection-start-column="78" selection-end-line="9" selection-end-column="78" />
+        <state relative-caret-position="176">
+          <caret line="13" column="56" selection-start-line="13" selection-start-column="56" selection-end-line="13" selection-end-column="56" />
           <folding>
-            <marker date="1559407268766" expanded="false" signature="6:54" ph="..." />
-            <marker date="1559407268766" expanded="true" signature="80:723" ph="{...}" />
-            <marker date="1559407268766" expanded="true" signature="126:721" ph="{...}" />
-            <marker date="1559407268766" expanded="true" signature="189:288" ph="{...}" />
-            <marker date="1559407268766" expanded="true" signature="558:715" ph="{...}" />
+            <marker date="1559414815712" expanded="false" signature="6:96" ph="..." />
+            <marker date="1559414815712" expanded="true" signature="129:630" ph="{...}" />
+            <marker date="1559414815712" expanded="true" signature="155:628" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -413,34 +450,100 @@
         <state relative-caret-position="256">
           <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
           <folding>
-            <marker date="1559407373365" expanded="true" signature="6:68" ph="..." />
-            <marker date="1559407373365" expanded="true" signature="94:652" ph="{...}" />
-            <marker date="1559407373365" expanded="true" signature="183:650" ph="{...}" />
-            <marker date="1559407373365" expanded="true" signature="250:644" ph="{...}" />
-            <marker date="1559407373365" expanded="true" signature="321:545" ph="{...}" />
+            <marker date="1559409699113" expanded="true" signature="6:68" ph="..." />
+            <marker date="1559409699113" expanded="true" signature="94:652" ph="{...}" />
+            <marker date="1559409699113" expanded="true" signature="183:650" ph="{...}" />
+            <marker date="1559409699113" expanded="true" signature="250:644" ph="{...}" />
+            <marker date="1559409699113" expanded="true" signature="321:545" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MasProject.DAL/Models/RegularCustomerCard.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="8" column="55" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
+          <folding>
+            <marker date="1559413822904" expanded="true" signature="77:290" ph="{...}" />
+            <marker date="1559413822904" expanded="true" signature="116:288" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MasProject.DAL/Models/Passenger.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        <state relative-caret-position="192">
+          <caret line="12" column="84" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="12" selection-end-column="84" />
           <folding>
-            <marker date="1559405746738" expanded="false" signature="6:96" ph="..." />
-            <marker date="1559405746738" expanded="true" signature="129:383" ph="{...}" />
-            <marker date="1559405746738" expanded="true" signature="158:381" ph="{...}" />
+            <marker date="1559415896667" expanded="true" signature="6:130" ph="..." />
+            <marker date="1559415896667" expanded="true" signature="163:522" ph="{...}" />
+            <marker date="1559415896667" expanded="true" signature="192:520" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MasProject.DAL/Models/Staff.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+          <folding>
+            <marker date="1559415032103" expanded="true" signature="6:110" ph="..." />
+            <marker date="1559415032103" expanded="true" signature="143:530" ph="{...}" />
+            <marker date="1559415032103" expanded="true" signature="168:528" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MasProject.DAL/Models/Reservation.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="23" column="84" selection-start-line="23" selection-start-column="84" selection-end-line="23" selection-end-column="84" />
+          <folding>
+            <marker date="1559415933043" expanded="true" signature="6:92" ph="..." />
+            <marker date="1559415933043" expanded="true" signature="125:719" ph="{...}" />
+            <marker date="1559415933043" expanded="true" signature="159:214" ph="{...}" />
+            <marker date="1559415933043" expanded="true" signature="244:717" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MasProject.DAL/Models/User.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+        <state relative-caret-position="128">
+          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
           <folding>
-            <marker date="1559407373372" expanded="true" signature="31:78" ph="{...}" />
-            <marker date="1559407373372" expanded="true" signature="55:76" ph="{...}" />
+            <marker date="1559416048919" expanded="true" signature="6:156" ph="..." />
+            <marker date="1559416048919" expanded="true" signature="189:592" ph="{...}" />
+            <marker date="1559416048919" expanded="true" signature="213:590" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MasProject.DAL/Models/PassengerReservation.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="8" column="58" selection-start-line="8" selection-start-column="58" selection-end-line="8" selection-end-column="58" />
+          <folding>
+            <marker date="1559415775249" expanded="true" signature="31:296" ph="{...}" />
+            <marker date="1559415775249" expanded="true" signature="71:294" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MasProject.DAL/AirportContext.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="60" selection-start-line="60" selection-end-line="60" />
+          <folding>
+            <marker date="1559416803560" expanded="false" signature="6:54" ph="..." />
+            <marker date="1559416803560" expanded="true" signature="80:2041" ph="{...}" />
+            <marker date="1559416803560" expanded="true" signature="126:2039" ph="{...}" />
+            <marker date="1559416803560" expanded="true" signature="189:288" ph="{...}" />
+            <marker date="1559416803560" expanded="true" signature="558:2033" ph="{...}" />
+            <marker date="1559416803560" expanded="true" signature="581:765" ph="Primary Keys Constraints" />
+            <marker date="1559416803560" expanded="true" signature="779:1812" ph="Assoctiations" />
+            <marker date="1559416803560" expanded="true" signature="1826:2023" ph="Unique Constraints" />
+            <marker date="1559416803560" expanded="true" signature="1854:1999" ph="/* modelBuilder.Entity&lt;IdentificationDocument&gt;() ... */" />
           </folding>
         </state>
       </provider>

@@ -13,5 +13,6 @@ namespace MasProject.DAL.Models
         public int Age => (int) (DateTime.Now.Subtract(DateOfBirth).TotalDays / 365);
         public virtual Passenger Passenger { get; set; }
         public virtual User User { get; set; }
+        public virtual Staff Staff { get; set; }
     }
 }

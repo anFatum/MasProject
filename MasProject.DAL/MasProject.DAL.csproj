@@ -51,7 +51,11 @@
     <Compile Include="AirportInitializer.cs" />
     <Compile Include="Models\IdentificationDocument.cs" />
     <Compile Include="Models\Passenger.cs" />
+    <Compile Include="Models\PassengerReservation.cs" />
     <Compile Include="Models\Person.cs" />
+    <Compile Include="Models\RegularCustomerCard.cs" />
+    <Compile Include="Models\Reservation.cs" />
+    <Compile Include="Models\Staff.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

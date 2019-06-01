@@ -25,7 +25,11 @@
         <e p="Models" t="Include">
           <e p="IdentificationDocument.cs" t="Include" />
           <e p="Passenger.cs" t="Include" />
+          <e p="PassengerReservation.cs" t="Include" />
           <e p="Person.cs" t="Include" />
+          <e p="RegularCustomerCard.cs" t="Include" />
+          <e p="Reservation.cs" t="Include" />
+          <e p="Staff.cs" t="Include" />
           <e p="User.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive" />

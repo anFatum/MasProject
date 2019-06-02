@@ -2,38 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fccff208-74da-47ab-8924-a44ead61cbb8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/MasProject.DAL/Models/Airline.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MasProject.DAL/Models/Airport.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MasProject.DAL/Models/CheckInStaff.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MasProject.DAL/Models/Dimension.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MasProject.DAL/Models/Flight.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MasProject.DAL/Models/FlightStaff.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MasProject.DAL/Models/Luggage.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MasProject.DAL/Models/Pilot.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MasProject.DAL/Models/Plane.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MasProject.DAL/Models/Stewardess.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MasProject.DAL/Models/Technician.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MasProject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MasProject/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MasProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MasProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MasProject.DAL/AirportContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MasProject.DAL/AirportContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MasProject.DAL/AirportInitializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MasProject.DAL/AirportInitializer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MasProject.DAL/MasProject.DAL.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MasProject.DAL/MasProject.DAL.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MasProject.DAL/Models/IdentificationDocument.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MasProject.DAL/Models/IdentificationDocument.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MasProject.DAL/Models/RegularCustomerCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MasProject.DAL/Models/RegularCustomerCard.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MasProject.DAL/Models/Reservation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MasProject.DAL/Models/Reservation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MasProject.DAL/Models/Staff.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MasProject.DAL/Models/Staff.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MasProject.DAL/Models/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MasProject.DAL/Models/User.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MasProject.DAL/bin/Debug/MasProject.DAL.exe" beforeDir="false" afterPath="$PROJECT_DIR$/MasProject.DAL/bin/Debug/MasProject.DAL.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MasProject.DAL/bin/Debug/MasProject.DAL.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MasProject.DAL/bin/Debug/MasProject.DAL.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MasProject.DAL/obj/Debug/MasProject.DAL.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MasProject.DAL/obj/Debug/MasProject.DAL.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MasProject.DAL/obj/Debug/MasProject.DAL.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MasProject.DAL/obj/Debug/MasProject.DAL.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MasProject.DAL/obj/Debug/MasProject.DAL.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MasProject.DAL/obj/Debug/MasProject.DAL.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MasProject.DAL/obj/Debug/MasProject.DAL.exe" beforeDir="false" afterPath="$PROJECT_DIR$/MasProject.DAL/obj/Debug/MasProject.DAL.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MasProject.DAL/obj/Debug/MasProject.DAL.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MasProject.DAL/obj/Debug/MasProject.DAL.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MasProject.DAL/packages.config" beforeDir="false" afterPath="$PROJECT_DIR$/MasProject.DAL/packages.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MasProject/MasProject.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MasProject/MasProject.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MasProject/obj/Debug/MasProject.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MasProject/obj/Debug/MasProject.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MasProject/packages.config" beforeDir="false" afterPath="$PROJECT_DIR$/MasProject/packages.config" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -127,8 +97,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MasProject.DAL/Models/User.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+            <state relative-caret-position="272">
+              <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
               <folding>
                 <marker date="1559426274731" expanded="true" signature="6:156" ph="..." />
                 <marker date="1559426274731" expanded="true" signature="189:637" ph="{...}" />
@@ -359,12 +329,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1559405701935</updated>
-      <workItem from="1559405703440" duration="13304000" />
+      <workItem from="1559405703440" duration="13643000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13304000" />
+    <option name="totallyTimeSpent" value="13643000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -379,21 +349,21 @@
     <frame x="0" y="23" width="1440" height="873" extended-state="0" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="NuGet" sideWeight="0.49928468" weight="0.3290653" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Entity Framework" sideWeight="0.52360517" side_tool="true" visible="true" weight="0.3290653" />
+      <window_info anchor="bottom" id="Entity Framework" sideWeight="0.50143063" side_tool="true" visible="true" weight="0.3290653" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Unit Tests" />
-      <window_info anchor="bottom" id="Terminal" sideWeight="0.49928468" weight="0.3290653" />
+      <window_info active="true" anchor="bottom" id="Terminal" sideWeight="0.4985694" visible="true" weight="0.3290653" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Performance Profiler" />
       <window_info anchor="bottom" id="Build" sideWeight="0.6559371" weight="0.3290653" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.47639486" visible="true" weight="0.3290653" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.47639486" weight="0.3290653" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -722,8 +692,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MasProject.DAL/Models/User.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+        <state relative-caret-position="272">
+          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
           <folding>
             <marker date="1559426274731" expanded="true" signature="6:156" ph="..." />
             <marker date="1559426274731" expanded="true" signature="189:637" ph="{...}" />

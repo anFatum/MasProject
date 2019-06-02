@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="AirportContext.cs" />
     <Compile Include="AirportInitializer.cs" />
+    <Compile Include="DatabaseHelper.cs" />
     <Compile Include="Models\Airline.cs" />
     <Compile Include="Models\Airport.cs" />
     <Compile Include="Models\CheckInStaff.cs" />

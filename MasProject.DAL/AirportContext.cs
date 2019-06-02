@@ -99,6 +99,10 @@ namespace MasProject.DAL
 
             #region Unique Constraints
 
+            modelBuilder.Entity<User>()
+                .HasIndex(user => user.Email)
+                .IsUnique();
+
             modelBuilder.Entity<IdentificationDocument>()
                 .HasIndex(doc => doc.DocumentNumber)
                 .IsUnique();

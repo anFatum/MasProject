@@ -10,3 +10,17 @@
 /Users/andud/RiderProjects/MasProject/MasProject/obj/Debug/MasProject.csproj.CopyComplete
 /Users/andud/RiderProjects/MasProject/MasProject/obj/Debug/MasProject.exe
 /Users/andud/RiderProjects/MasProject/MasProject/obj/Debug/MasProject.pdb
+D:\Rider Projects\MasProject\MasProject\bin\Debug\MasProject.exe.config
+D:\Rider Projects\MasProject\MasProject\bin\Debug\MasProject.exe
+D:\Rider Projects\MasProject\MasProject\bin\Debug\MasProject.pdb
+D:\Rider Projects\MasProject\MasProject\bin\Debug\Bogus.dll
+D:\Rider Projects\MasProject\MasProject\bin\Debug\EntityFramework.dll
+D:\Rider Projects\MasProject\MasProject\bin\Debug\EntityFramework.SqlServer.dll
+D:\Rider Projects\MasProject\MasProject\bin\Debug\Bogus.pdb
+D:\Rider Projects\MasProject\MasProject\bin\Debug\Bogus.xml
+D:\Rider Projects\MasProject\MasProject\bin\Debug\EntityFramework.xml
+D:\Rider Projects\MasProject\MasProject\bin\Debug\EntityFramework.SqlServer.xml
+D:\Rider Projects\MasProject\MasProject\obj\Debug\MasProject.csproj.CoreCompileInputs.cache
+D:\Rider Projects\MasProject\MasProject\obj\Debug\MasProject.csproj.CopyComplete
+D:\Rider Projects\MasProject\MasProject\obj\Debug\MasProject.exe
+D:\Rider Projects\MasProject\MasProject\obj\Debug\MasProject.pdb

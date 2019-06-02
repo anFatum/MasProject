@@ -33,15 +33,21 @@
             this.welcomeBackLabel = new System.Windows.Forms.Label();
             this.stateReservations = new System.Windows.Forms.Label();
             this.controlPanel = new System.Windows.Forms.GroupBox();
-            this.reservationsView = new System.Windows.Forms.DataGridView();
-            this.orderByLabel = new System.Windows.Forms.Label();
-            this.orderByComboBox = new System.Windows.Forms.ComboBox();
-            this.reservationStateLabel = new System.Windows.Forms.Label();
-            this.stateComboBox = new System.Windows.Forms.ComboBox();
-            this.filterButton = new System.Windows.Forms.Button();
-            this.addButton = new System.Windows.Forms.Button();
             this.logoutButton = new System.Windows.Forms.Button();
+            this.addButton = new System.Windows.Forms.Button();
+            this.filterButton = new System.Windows.Forms.Button();
+            this.stateComboBox = new System.Windows.Forms.ComboBox();
+            this.reservationStateLabel = new System.Windows.Forms.Label();
+            this.orderByComboBox = new System.Windows.Forms.ComboBox();
+            this.orderByLabel = new System.Windows.Forms.Label();
+            this.reservationsView = new System.Windows.Forms.DataGridView();
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.contextMenuReservations = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.showFlightDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showPassengersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showLuggageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.payForAReservationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.continueReservationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.flightNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateOfReservationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.reservationTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,6 +57,7 @@
             this.controlPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.reservationsView)).BeginInit();
             this.mainPanel.SuspendLayout();
+            this.contextMenuReservations.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.reservationUserModelBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,6 +83,8 @@
             // 
             // controlPanel
             // 
+            this.controlPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.controlPanel.Controls.Add(this.logoutButton);
             this.controlPanel.Controls.Add(this.addButton);
             this.controlPanel.Controls.Add(this.filterButton);
@@ -90,40 +99,43 @@
             this.controlPanel.TabStop = false;
             this.controlPanel.Text = "Control panel";
             // 
-            // reservationsView
+            // logoutButton
             // 
-            this.reservationsView.AutoGenerateColumns = false;
-            this.reservationsView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.reservationsView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.flightNumberDataGridViewTextBoxColumn,
-            this.dateOfReservationDataGridViewTextBoxColumn,
-            this.reservationTypeDataGridViewTextBoxColumn,
-            this.priceDataGridViewTextBoxColumn,
-            this.reservationStateDataGridViewTextBoxColumn});
-            this.reservationsView.DataSource = this.reservationUserModelBindingSource;
-            this.reservationsView.Location = new System.Drawing.Point(16, 59);
-            this.reservationsView.Name = "reservationsView";
-            this.reservationsView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.reservationsView.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.reservationsView.Size = new System.Drawing.Size(578, 379);
-            this.reservationsView.TabIndex = 4;
+            this.logoutButton.Location = new System.Drawing.Point(21, 385);
+            this.logoutButton.Name = "logoutButton";
+            this.logoutButton.Size = new System.Drawing.Size(134, 23);
+            this.logoutButton.TabIndex = 6;
+            this.logoutButton.Text = "Log out";
+            this.logoutButton.UseVisualStyleBackColor = true;
+            this.logoutButton.Click += new System.EventHandler(this.LogoutButton_Click);
             // 
-            // orderByLabel
+            // addButton
             // 
-            this.orderByLabel.AutoSize = true;
-            this.orderByLabel.Location = new System.Drawing.Point(18, 31);
-            this.orderByLabel.Name = "orderByLabel";
-            this.orderByLabel.Size = new System.Drawing.Size(50, 13);
-            this.orderByLabel.TabIndex = 0;
-            this.orderByLabel.Text = "Order by:";
+            this.addButton.Location = new System.Drawing.Point(21, 167);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(134, 23);
+            this.addButton.TabIndex = 5;
+            this.addButton.Text = "Add new reservation";
+            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
-            // orderByComboBox
+            // filterButton
             // 
-            this.orderByComboBox.FormattingEnabled = true;
-            this.orderByComboBox.Location = new System.Drawing.Point(21, 48);
-            this.orderByComboBox.Name = "orderByComboBox";
-            this.orderByComboBox.Size = new System.Drawing.Size(134, 21);
-            this.orderByComboBox.TabIndex = 1;
+            this.filterButton.Location = new System.Drawing.Point(21, 138);
+            this.filterButton.Name = "filterButton";
+            this.filterButton.Size = new System.Drawing.Size(134, 23);
+            this.filterButton.TabIndex = 4;
+            this.filterButton.Text = "Submit";
+            this.filterButton.UseVisualStyleBackColor = true;
+            this.filterButton.Click += new System.EventHandler(this.FilterButton_Click);
+            // 
+            // stateComboBox
+            // 
+            this.stateComboBox.FormattingEnabled = true;
+            this.stateComboBox.Location = new System.Drawing.Point(21, 102);
+            this.stateComboBox.Name = "stateComboBox";
+            this.stateComboBox.Size = new System.Drawing.Size(134, 21);
+            this.stateComboBox.TabIndex = 3;
             // 
             // reservationStateLabel
             // 
@@ -134,41 +146,47 @@
             this.reservationStateLabel.TabIndex = 2;
             this.reservationStateLabel.Text = "Reservation status:";
             // 
-            // stateComboBox
+            // orderByComboBox
             // 
-            this.stateComboBox.FormattingEnabled = true;
-            this.stateComboBox.Location = new System.Drawing.Point(21, 102);
-            this.stateComboBox.Name = "stateComboBox";
-            this.stateComboBox.Size = new System.Drawing.Size(134, 21);
-            this.stateComboBox.TabIndex = 3;
+            this.orderByComboBox.FormattingEnabled = true;
+            this.orderByComboBox.Location = new System.Drawing.Point(21, 48);
+            this.orderByComboBox.Name = "orderByComboBox";
+            this.orderByComboBox.Size = new System.Drawing.Size(134, 21);
+            this.orderByComboBox.TabIndex = 1;
             // 
-            // filterButton
+            // orderByLabel
             // 
-            this.filterButton.Location = new System.Drawing.Point(21, 138);
-            this.filterButton.Name = "filterButton";
-            this.filterButton.Size = new System.Drawing.Size(134, 23);
-            this.filterButton.TabIndex = 4;
-            this.filterButton.Text = "Submit";
-            this.filterButton.UseVisualStyleBackColor = true;
+            this.orderByLabel.AutoSize = true;
+            this.orderByLabel.Location = new System.Drawing.Point(18, 31);
+            this.orderByLabel.Name = "orderByLabel";
+            this.orderByLabel.Size = new System.Drawing.Size(50, 13);
+            this.orderByLabel.TabIndex = 0;
+            this.orderByLabel.Text = "Order by:";
             // 
-            // addButton
+            // reservationsView
             // 
-            this.addButton.Location = new System.Drawing.Point(21, 167);
-            this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(134, 23);
-            this.addButton.TabIndex = 5;
-            this.addButton.Text = "Add new reservation";
-            this.addButton.UseVisualStyleBackColor = true;
-            // 
-            // logoutButton
-            // 
-            this.logoutButton.Location = new System.Drawing.Point(21, 385);
-            this.logoutButton.Name = "logoutButton";
-            this.logoutButton.Size = new System.Drawing.Size(134, 23);
-            this.logoutButton.TabIndex = 6;
-            this.logoutButton.Text = "Log out";
-            this.logoutButton.UseVisualStyleBackColor = true;
-            this.logoutButton.Click += new System.EventHandler(this.LogoutButton_Click);
+            this.reservationsView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.reservationsView.AutoGenerateColumns = false;
+            this.reservationsView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.reservationsView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.flightNumberDataGridViewTextBoxColumn,
+            this.dateOfReservationDataGridViewTextBoxColumn,
+            this.reservationTypeDataGridViewTextBoxColumn,
+            this.priceDataGridViewTextBoxColumn,
+            this.reservationStateDataGridViewTextBoxColumn});
+            this.reservationsView.ContextMenuStrip = this.contextMenuReservations;
+            this.reservationsView.DataSource = this.reservationUserModelBindingSource;
+            this.reservationsView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.reservationsView.Location = new System.Drawing.Point(16, 59);
+            this.reservationsView.MultiSelect = false;
+            this.reservationsView.Name = "reservationsView";
+            this.reservationsView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.reservationsView.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.reservationsView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.reservationsView.Size = new System.Drawing.Size(578, 379);
+            this.reservationsView.TabIndex = 4;
             // 
             // mainPanel
             // 
@@ -181,6 +199,48 @@
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(800, 450);
             this.mainPanel.TabIndex = 5;
+            // 
+            // contextMenuReservations
+            // 
+            this.contextMenuReservations.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showFlightDetailsToolStripMenuItem,
+            this.showPassengersToolStripMenuItem,
+            this.showLuggageToolStripMenuItem,
+            this.payForAReservationToolStripMenuItem,
+            this.continueReservationToolStripMenuItem});
+            this.contextMenuReservations.Name = "contextMenuReservations";
+            this.contextMenuReservations.Size = new System.Drawing.Size(185, 114);
+            this.contextMenuReservations.Opening += new System.ComponentModel.CancelEventHandler(this.ContextMenuReservations_Opening);
+            // 
+            // showFlightDetailsToolStripMenuItem
+            // 
+            this.showFlightDetailsToolStripMenuItem.Name = "showFlightDetailsToolStripMenuItem";
+            this.showFlightDetailsToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.showFlightDetailsToolStripMenuItem.Text = "Show flight details";
+            // 
+            // showPassengersToolStripMenuItem
+            // 
+            this.showPassengersToolStripMenuItem.Name = "showPassengersToolStripMenuItem";
+            this.showPassengersToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.showPassengersToolStripMenuItem.Text = "Show passengers";
+            // 
+            // showLuggageToolStripMenuItem
+            // 
+            this.showLuggageToolStripMenuItem.Name = "showLuggageToolStripMenuItem";
+            this.showLuggageToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.showLuggageToolStripMenuItem.Text = "Show luggage";
+            // 
+            // payForAReservationToolStripMenuItem
+            // 
+            this.payForAReservationToolStripMenuItem.Name = "payForAReservationToolStripMenuItem";
+            this.payForAReservationToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.payForAReservationToolStripMenuItem.Text = "Pay for a reservation";
+            // 
+            // continueReservationToolStripMenuItem
+            // 
+            this.continueReservationToolStripMenuItem.Name = "continueReservationToolStripMenuItem";
+            this.continueReservationToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.continueReservationToolStripMenuItem.Text = "Continue reservation";
             // 
             // flightNumberDataGridViewTextBoxColumn
             // 
@@ -230,6 +290,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.reservationsView)).EndInit();
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
+            this.contextMenuReservations.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.reservationUserModelBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -259,5 +320,11 @@
         private System.Windows.Forms.Label orderByLabel;
         private System.Windows.Forms.Button logoutButton;
         private System.Windows.Forms.Panel mainPanel;
+        private System.Windows.Forms.ContextMenuStrip contextMenuReservations;
+        private System.Windows.Forms.ToolStripMenuItem showFlightDetailsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem showPassengersToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem showLuggageToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem payForAReservationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem continueReservationToolStripMenuItem;
     }
 }

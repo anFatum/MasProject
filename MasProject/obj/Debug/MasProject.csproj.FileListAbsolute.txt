@@ -24,3 +24,4 @@ D:\Rider Projects\MasProject\MasProject\obj\Debug\MasProject.csproj.CoreCompileI
 D:\Rider Projects\MasProject\MasProject\obj\Debug\MasProject.csproj.CopyComplete
 D:\Rider Projects\MasProject\MasProject\obj\Debug\MasProject.exe
 D:\Rider Projects\MasProject\MasProject\obj\Debug\MasProject.pdb
+D:\Rider Projects\MasProject\MasProject\obj\Debug\MasProject.csprojAssemblyReference.cache

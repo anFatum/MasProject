@@ -29,7 +29,35 @@ namespace MasProject.DAL
             using(var context = new AirportContext())
             {
                 var reservations = context.Reservations.Where(reservation => reservation.User.UserId == user.UserId).ToList();
+                reservations.ForEach(reservation =>
+                {
+                    context.Entry(reservation).Reference(r => r.Flight).Load();
+                });
                 return reservations;
+            }
+        }
+
+        public static ICollection<Reservation> GetReservationsForUserWithState(User user, ReservationState reservationState)
+        {
+            using (var context = new AirportContext())
+            {
+                var reservations = context.Reservations.Where(reservation => reservation.User.UserId == user.UserId && reservation.ReservationState == reservationState).ToList();
+                reservations.ForEach(reservation =>
+                {
+                    context.Entry(reservation).Reference(r => r.Flight).Load();
+                });
+                return reservations;
+            }
+        }
+
+        public static ICollection<Flight> GetFlights()
+        {
+            using (var context = new AirportContext())
+            {
+                var flights = context.Flights.Include("Airline")
+                                             .Include("DestinationAirport")
+                                             .Include("OriginAirport").ToList();
+                return flights;
             }
         }
     }

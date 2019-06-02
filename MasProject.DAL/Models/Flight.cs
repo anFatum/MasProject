@@ -6,6 +6,10 @@ namespace MasProject.DAL.Models
 {
     public class Flight
     {
+        public Flight()
+        {
+            Reservations = new HashSet<Reservation>();
+        }
         [Key] public int FlightId { get; set; }
         [Required] public DateTime TimeOfFlight { get; set; }
         [Required] [MaxLength(16)] public string FlightNumber { get; set; }

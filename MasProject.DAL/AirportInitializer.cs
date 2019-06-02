@@ -95,7 +95,24 @@ namespace MasProject.DAL
                 context.Airports.FirstOrDefault(airport => airport.AirportId != flight.DestinationAirport.AirportId);
             context.Flights.Add(flight);
             context.SaveChanges();
+
+            foreach (var user in context.Users.Take(2).ToList())
+            {
+                var testReservation = new Faker<Reservation>()
+                    .RuleFor(reservation => reservation.DateOfReservation, faker => faker.Date.Between(
+                        user.DateOfRegistration,
+                        flight.TimeOfFlight))
+                    .RuleFor(reservation => reservation.Price, faker => Double.Parse(faker.Commerce.Price()))
+                    .RuleFor(reservation => reservation.ReservationType, faker => faker.PickRandom<ReservationType>())
+                    .RuleFor(reservation => reservation.ReservationState, ReservationState.WaitingForFlight)
+                    .RuleFor(reservation => reservation.Flight, flight)
+                    .RuleFor(reservation => reservation.User, user)
+                    .Generate();
+                context.Reservations.Add(testReservation);
+                user.Reservations.Add(testReservation);
+                flight.Reservations.Add(testReservation);
+                context.SaveChanges();
+            }
         }
     }
 }
-

@@ -25,7 +25,7 @@ namespace MasProject.DAL.Models
     public class Reservation
     {
         [Key] public int ReservationId { get; set; }
-        public DateTime DateOfCancellation { get; set; }
+        public DateTime? DateOfCancellation { get; set; }
         [Required] public DateTime DateOfReservation { get; set; }
         [Required] public double Price { get; set; }
         [Required] public ReservationType ReservationType { get; set; }

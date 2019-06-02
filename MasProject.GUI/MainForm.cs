@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using MasProject.DAL;
 
 namespace MasProject.GUI
 {
@@ -22,8 +23,30 @@ namespace MasProject.GUI
 
         private void InitElements()
         {
+            LogInUser();
+            RefreshData();
+            reservationsView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            var states = Enum.GetNames(typeof(ReservationState)).ToList();
+            states.Add("All");
+            stateComboBox.DataSource = states;
+            orderByComboBox.DataSource = typeof(ReservationUserModel).GetProperties().Select(p => p.Name).ToList();
+        }
+
+        private void RefreshData(string columnToSort = "DateOfReservation", ReservationState? reservationType = null)
+        {
             _reservations = new List<ReservationUserModel>();
-            foreach (var reservation in _user.Reservations)//DatabaseHelper.GetReservationsForUser(_user))
+            ICollection<Reservation> newReservations;
+            if (reservationType.HasValue)
+            {
+                newReservations = DatabaseHelper.GetReservationsForUserWithState(_user, reservationType.Value);
+                stateReservations.Text = $"Your {reservationType} reservations";
+            }
+            else
+            {
+                newReservations = DatabaseHelper.GetReservationsForUser(_user);
+                stateReservations.Text = "All your reservations";;
+            }
+            foreach (var reservation in newReservations)
             {
                 _reservations.Add(new ReservationUserModel
                 {
@@ -34,12 +57,9 @@ namespace MasProject.GUI
                     Price = reservation.Price
                 });
             }
-            LogInUser();
-            reservationsView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            stateComboBox.DataSource = Enum.GetValues(typeof(ReservationState));
-            orderByComboBox.DataSource = typeof(ReservationUserModel).GetProperties().Select(p => p.Name).ToList(); ;
+            _reservations = _reservations.OrderBy(c => c.GetType().GetProperty(columnToSort).GetValue(c, null)).ToList();
+            reservationsView.DataSource = _reservations;
         }
-
 
         private void LogoutButton_Click(object sender, EventArgs e)
         {
@@ -51,6 +71,37 @@ namespace MasProject.GUI
         {
             if (!_form.Visible)
                 _form.Close();
+        }
+
+        private void FilterButton_Click(object sender, EventArgs e)
+        {
+            var columnToSort = orderByComboBox.SelectedItem.ToString();
+            var reservationState = stateComboBox.SelectedItem.ToString();
+            ReservationState reservationType;
+            if (Enum.TryParse(reservationState, out reservationType))
+                RefreshData(columnToSort, reservationType);
+            else RefreshData(columnToSort, null);
+        }
+
+        private void ContextMenuReservations_Opening(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            contextMenuReservations.Items[3].Enabled = true;
+            contextMenuReservations.Items[4].Enabled = true;
+
+            if (!_reservations
+                .ElementAt(reservationsView.CurrentCell.RowIndex)
+                .ReservationState.Equals(ReservationState.WaitingForPayment))
+                contextMenuReservations.Items[3].Enabled = false;
+
+            if (!_reservations
+                .ElementAt(reservationsView.CurrentCell.RowIndex)
+                .ReservationState.Equals(ReservationState.InProgress))
+                contextMenuReservations.Items[4].Enabled = false;
+        }
+
+        private void AddButton_Click(object sender, EventArgs e)
+        {
+            new AddReservationForm().ShowDialog();
         }
     }
 }

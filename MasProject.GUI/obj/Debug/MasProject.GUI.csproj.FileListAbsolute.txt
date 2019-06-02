@@ -21,3 +21,5 @@ D:\Rider Projects\MasProject\MasProject.GUI\obj\Debug\MasProject.GUI.csproj.Core
 D:\Rider Projects\MasProject\MasProject.GUI\obj\Debug\MasProject.GUI.csproj.CopyComplete
 D:\Rider Projects\MasProject\MasProject.GUI\obj\Debug\MasProject.GUI.exe
 D:\Rider Projects\MasProject\MasProject.GUI\obj\Debug\MasProject.GUI.pdb
+D:\Rider Projects\MasProject\MasProject.GUI\obj\Debug\MasProject.GUI.AddReservationForm.resources
+D:\Rider Projects\MasProject\MasProject.GUI\obj\Debug\MasProject.GUI.FlightsForm.resources

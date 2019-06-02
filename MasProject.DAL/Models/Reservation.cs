@@ -17,7 +17,9 @@ namespace MasProject.DAL.Models
         WaitingForPayment,
         Cancelled,
         Refunded,
-        Done
+        Done,
+        WaitingForRefund,
+        WaitingForFlight
     }
 
     public class Reservation

@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using Bogus;
@@ -35,7 +34,7 @@ namespace MasProject.DAL
             {
                 context.Persons.Add(person);
                 context.SaveChanges();
-                var passenger = new Passenger()
+                var passenger = new Passenger
                 {
                     Person = person,
                     IdentificationDocument = context.IdentificationDocuments.First(document =>
@@ -79,25 +78,30 @@ namespace MasProject.DAL
 
             testPlanes.Generate(5).ForEach(plane => context.Planes.Add(plane));
             context.SaveChanges();
-
-            var flight = new Flight()
+            for (int i = 0; i < 3; i++)
             {
-                Airline =
-                    context.Airlines.OrderBy(r => Guid.NewGuid()).Skip(new Randomizer().Int(0, 4)).Take(1).First(),
-                DestinationAirport = context.Airports.OrderBy(r => Guid.NewGuid()).Skip(new Randomizer().Int(0, 5))
-                    .Take(1).First(),
-                FlightNumber = new Bogus.Randomizer().Replace("???####"),
-                TimeOfFlight = new Faker().Date.Future(1),
-                Plane = context.Planes.OrderBy(r => Guid.NewGuid()).Skip(new Randomizer().Int(0, 4)).Take(1).First()
-            };
+                var flight = new Flight
+                {
+                    Airline =
+                        context.Airlines.OrderBy(r => Guid.NewGuid()).Skip(new Randomizer().Int(0, 4)).Take(1).First(),
+                    DestinationAirport = context.Airports.OrderBy(r => Guid.NewGuid()).Skip(new Randomizer().Int(0, 5))
+                        .Take(1).First(),
+                    FlightNumber = new Randomizer().Replace("???####"),
+                    TimeOfFlight = new Faker().Date.Future(1),
+                    Plane = context.Planes.OrderBy(r => Guid.NewGuid()).Skip(new Randomizer().Int(0, 4)).Take(1).First()
+                };
 
-            flight.OriginAirport =
-                context.Airports.FirstOrDefault(airport => airport.AirportId != flight.DestinationAirport.AirportId);
-            context.Flights.Add(flight);
-            context.SaveChanges();
+                flight.OriginAirport =
+                    context.Airports.FirstOrDefault(airport =>
+                        airport.AirportId != flight.DestinationAirport.AirportId);
+                context.Flights.Add(flight);
+                context.SaveChanges();
+            }
 
             foreach (var user in context.Users.Take(2).ToList())
             {
+                var flight = context.Flights.OrderBy(r => Guid.NewGuid()).Skip(new Randomizer().Int(0, 2)).Take(1)
+                    .First();
                 var testReservation = new Faker<Reservation>()
                     .RuleFor(reservation => reservation.DateOfReservation, faker => faker.Date.Between(
                         user.DateOfRegistration,

@@ -1,9 +1,9 @@
 ﻿using MasProject.DAL.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MasProject.DAL
 {
@@ -22,30 +22,40 @@ namespace MasProject.DAL
                 context.Entry(user).Reference(u => u.Person).Load();
                 context.Entry(user).Collection(u => u.Reservations).Load();
             }
+
             return user;
         }
 
-        public static ICollection<Reservation> GetReservationsForUser(User user){    
-            using(var context = new AirportContext())
+        public static ICollection<Reservation> GetReservationsForUser(User user)
+        {
+            using (var context = new AirportContext())
             {
-                var reservations = context.Reservations.Where(reservation => reservation.User.UserId == user.UserId).ToList();
-                reservations.ForEach(reservation =>
-                {
-                    context.Entry(reservation).Reference(r => r.Flight).Load();
-                });
+                var reservations = context.Reservations.Where(reservation => reservation.User.UserId == user.UserId)
+                    .ToList();
+                reservations.ForEach(reservation => { context.Entry(reservation).Reference(r => r.Flight).Load(); });
                 return reservations;
             }
         }
 
-        public static ICollection<Reservation> GetReservationsForUserWithState(User user, ReservationState reservationState)
+        public static ICollection<User> GetUsers()
         {
             using (var context = new AirportContext())
             {
-                var reservations = context.Reservations.Where(reservation => reservation.User.UserId == user.UserId && reservation.ReservationState == reservationState).ToList();
-                reservations.ForEach(reservation =>
-                {
-                    context.Entry(reservation).Reference(r => r.Flight).Load();
-                });
+                var users = context.Users.Include(u => u.Person)
+                    .Include(u => u.Reservations)
+                    .Include(u => u.RegularCustomerCard)
+                    .ToList();
+                return users;
+            }
+        }
+
+        public static ICollection<Reservation> GetReservationsForUserWithState(User user,
+            ReservationState reservationState)
+        {
+            using (var context = new AirportContext())
+            {
+                var reservations = GetReservationsForUser(user).Where(reservation => reservation.ReservationState == reservationState)
+                    .ToList();
                 return reservations;
             }
         }
@@ -54,10 +64,166 @@ namespace MasProject.DAL
         {
             using (var context = new AirportContext())
             {
-                var flights = context.Flights.Include("Airline")
-                                             .Include("DestinationAirport")
-                                             .Include("OriginAirport").ToList();
+                var flights = context.Flights
+                    .Include(f => f.Airline)
+                    .Include(f => f.DestinationAirport)
+                    .Include(f => f.OriginAirport)
+                    .Include(f => f.Plane)
+                    .Include(f => f.Reservations)
+                    .ToList();
                 return flights;
+            }
+        }
+
+        public static Flight GetFlightByNumber(string flightNumber)
+        {
+            using (var context = new AirportContext())
+            {
+                var searchFlight = GetFlights()
+                    .First(flight => flight.FlightNumber.Equals(flightNumber));
+                return searchFlight;
+            }
+        }
+
+        public static ICollection<Reservation> GetReservations()
+        {
+            using (var context = new AirportContext())
+            {
+                var reservations = context.Reservations
+                    .Include(r => r.Flight)
+                    .Include(r => r.PassengerReservations)
+                    .Include(r => r.User)
+                    .Include(r => r.Luggage)
+                    .ToList();
+                return reservations;
+            }
+        }
+
+        public static Reservation GetReservationById(int reservationId)
+        {
+            using (var context = new AirportContext())
+            {
+                return GetReservations().First(r => r.ReservationId == reservationId);
+            }
+        }
+
+        public static ICollection<Passenger> GetPassangersForReservation(int reservationId)
+        {
+            using (var context = new AirportContext())
+            {
+                var passengers = context.PassengerReservations
+                    .Where(pr => pr.ReservationId == reservationId)
+                    .Select(pr => pr.Passenger)
+                    .Include(p => p.Person)
+                    .Include(p => p.IdentificationDocument)
+                    .ToList();
+                return passengers;
+            }
+        }
+
+        public static void AddOrUpdateReservation(Reservation reservation)
+        {
+            using (var context = new AirportContext())
+            {
+                if (context.Entry(reservation).State == EntityState.Detached)
+                {
+                    context.Reservations.Add(reservation);
+                }
+
+                context.SaveChanges();
+                reservation.User = GetUsers().First(u => u.UserId == reservation.UserId);
+                reservation.Flight = GetFlights().First(f => f.FlightId == reservation.FlightId);
+            }
+        }
+
+        public static int AddIdentificationDocument(IdentificationDocument document)
+        {
+            using (var context = new AirportContext())
+            {
+                context.IdentificationDocuments.Add(document);
+                context.SaveChanges();
+            }
+
+            return document.IdentificationDocumentId;
+        }
+
+        public static int AddPerson(Person person)
+        {
+            using (var context = new AirportContext())
+            {
+                context.Persons.Add(person);
+                context.SaveChanges();
+            }
+
+            return person.PersonId;
+        }
+
+        public static int AddPassenger(int documentId, int personId)
+        {
+            Passenger passenger;
+            using (var context = new AirportContext())
+            {
+                var identificationDoc =
+                    context.IdentificationDocuments.First(id => id.IdentificationDocumentId == documentId);
+                var person =
+                    context.Persons.First(pers => pers.PersonId == personId);
+                passenger = new Passenger
+                {
+                    IdentificationDocument = identificationDoc,
+                    Person = person,
+                    PassengerReservations = new HashSet<PassengerReservation>()
+                };
+                context.Passengers.Add(passenger);
+                context.SaveChanges();
+            }
+
+            return passenger.PassengerId;
+        }
+
+        public static void AddPassengerToReservation(Reservation reservation, int passengerId)
+        {
+            using (var context = new AirportContext())
+            {
+                var passenger = context.Passengers
+                    .Include(p => p.Person)
+                    .Include(p => p.IdentificationDocument)
+                    .First(p => p.PassengerId == passengerId);
+
+                var reservationPassenger = new PassengerReservation
+                {
+                    PassengerId = passengerId,
+                    ReservationId = reservation.ReservationId
+                };
+                context.PassengerReservations.Add(reservationPassenger);
+                context.SaveChanges();
+            }
+        }
+
+        public static bool DeleteReservation(Reservation reservation)
+        {
+            using (var context = new AirportContext())
+            {
+                try
+                {
+                    var entry = context.Entry(reservation);
+                    entry.State = EntityState.Deleted;
+                    context.SaveChanges();
+                    return true;
+                }
+                catch
+                {
+                    return false;
+                }
+            }
+        }
+        public static void SetStateToReservation(int reservationId, ReservationState state)
+        {
+            using (var context = new AirportContext())
+            {
+                context.Reservations
+                    .FirstOrDefault(r => r.ReservationId == reservationId)
+                    .ReservationState = state;
+                context.SaveChanges();
             }
         }
     }

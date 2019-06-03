@@ -25,7 +25,7 @@ namespace MasProject.GUI
                 _welcomeForm.LogInUser(user);
             } catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, @"Login error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

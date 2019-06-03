@@ -31,8 +31,11 @@ namespace MasProject.DAL.Models
         [Required] public ReservationType ReservationType { get; set; }
         [Required] public ReservationState ReservationState { get; set; }
 
-        public virtual User User { get; set; }
-        public virtual Flight Flight { get; set; }
+        public int UserId { get; set; }
+        public int FlightId { get; set; }
+
+        public User User { get; set; }
+        public Flight Flight { get; set; }
 
         public virtual ICollection<PassengerReservation> PassengerReservations { get; set; }
         public virtual ICollection<Luggage> Luggage { get; set; }

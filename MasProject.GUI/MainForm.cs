@@ -101,7 +101,8 @@ namespace MasProject.GUI
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            new AddReservationForm().ShowDialog();
+            new AddReservationForm(_user).ShowDialog();
+            RefreshData();
         }
     }
 }

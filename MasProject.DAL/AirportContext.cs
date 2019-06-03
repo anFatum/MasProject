@@ -7,7 +7,7 @@ namespace MasProject.DAL
     {
         public AirportContext() : base("AirportContext")
         {
-            Database.SetInitializer<AirportContext>(new AirportInitializer());
+            Database.SetInitializer(new AirportInitializer());
         }
 
 
@@ -16,9 +16,11 @@ namespace MasProject.DAL
         public DbSet<CheckInStaff> CheckInStaff { get; set; }
         public DbSet<Dimension> Dimensions { get; set; }
         public DbSet<Flight> Flights { get; set; }
+        public DbSet<FlightStaff> FlightStaff { get; set; }
         public DbSet<IdentificationDocument> IdentificationDocuments { get; set; }
         public DbSet<Luggage> Luggage { get; set; }
         public DbSet<Passenger> Passengers { get; set; }
+        public DbSet<PassengerReservation> PassengerReservations { get; set; }
         public DbSet<Person> Persons { get; set; }
         public DbSet<Pilot> Pilots { get; set; }
         public DbSet<Plane> Planes { get; set; }
@@ -54,10 +56,6 @@ namespace MasProject.DAL
                 .HasOptional(p => p.Staff)
                 .WithRequired(ps => ps.Person);
 
-            modelBuilder.Entity<User>()
-                .HasMany(usr => usr.Reservations)
-                .WithRequired(r => r.User);
-
             modelBuilder.Entity<PassengerReservation>()
                 .HasRequired(pr => pr.Passenger)
                 .WithMany(p => p.PassengerReservations)
@@ -84,6 +82,9 @@ namespace MasProject.DAL
                 .HasRequired(reservation => reservation.Flight)
                 .WithMany(flight => flight.Reservations);
 
+            modelBuilder.Entity<Reservation>()
+                .HasRequired(reservation => reservation.User)
+                .WithMany(user => user.Reservations);
 
             modelBuilder.Entity<FlightStaff>()
                 .HasRequired(flightStaff => flightStaff.Flight)

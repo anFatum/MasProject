@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.flightView = new System.Windows.Forms.DataGridView();
-            this.selectBatton = new System.Windows.Forms.Button();
+            this.selectButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
             this.timeOfFlightDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.flightNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,28 +54,31 @@
             this.originAirportDataGridViewTextBoxColumn});
             this.flightView.DataSource = this.flightShortViewModelBindingSource;
             this.flightView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.flightView.Location = new System.Drawing.Point(12, 12);
+            this.flightView.Location = new System.Drawing.Point(16, 15);
+            this.flightView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flightView.MultiSelect = false;
             this.flightView.Name = "flightView";
             this.flightView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.flightView.Size = new System.Drawing.Size(727, 179);
+            this.flightView.Size = new System.Drawing.Size(969, 220);
             this.flightView.TabIndex = 0;
             // 
-            // selectBatton
+            // selectButton
             // 
-            this.selectBatton.Location = new System.Drawing.Point(548, 208);
-            this.selectBatton.Name = "selectBatton";
-            this.selectBatton.Size = new System.Drawing.Size(88, 24);
-            this.selectBatton.TabIndex = 1;
-            this.selectBatton.Text = "Select";
-            this.selectBatton.UseVisualStyleBackColor = true;
-            this.selectBatton.Click += new System.EventHandler(this.SelectBatton_Click);
+            this.selectButton.Location = new System.Drawing.Point(731, 256);
+            this.selectButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.selectButton.Name = "selectButton";
+            this.selectButton.Size = new System.Drawing.Size(117, 30);
+            this.selectButton.TabIndex = 1;
+            this.selectButton.Text = "Select";
+            this.selectButton.UseVisualStyleBackColor = true;
+            this.selectButton.Click += new System.EventHandler(this.SelectButton_Click);
             // 
             // cancelButton
             // 
-            this.cancelButton.Location = new System.Drawing.Point(649, 208);
+            this.cancelButton.Location = new System.Drawing.Point(865, 256);
+            this.cancelButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(88, 24);
+            this.cancelButton.Size = new System.Drawing.Size(117, 30);
             this.cancelButton.TabIndex = 2;
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
@@ -117,12 +120,15 @@
             // 
             // FlightsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(749, 244);
+            this.ClientSize = new System.Drawing.Size(999, 300);
             this.Controls.Add(this.cancelButton);
-            this.Controls.Add(this.selectBatton);
+            this.Controls.Add(this.selectButton);
             this.Controls.Add(this.flightView);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximumSize = new System.Drawing.Size(1017, 347);
+            this.MinimumSize = new System.Drawing.Size(1017, 347);
             this.Name = "FlightsForm";
             this.Text = "FlightsForm";
             ((System.ComponentModel.ISupportInitialize)(this.flightView)).EndInit();
@@ -140,7 +146,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn destinationAirportDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn originAirportDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource flightShortViewModelBindingSource;
-        private System.Windows.Forms.Button selectBatton;
+        private System.Windows.Forms.Button selectButton;
         private System.Windows.Forms.Button cancelButton;
     }
 }

@@ -25,3 +25,18 @@ D:\Rider Projects\MasProject\MasProject\obj\Debug\MasProject.csproj.CopyComplete
 D:\Rider Projects\MasProject\MasProject\obj\Debug\MasProject.exe
 D:\Rider Projects\MasProject\MasProject\obj\Debug\MasProject.pdb
 D:\Rider Projects\MasProject\MasProject\obj\Debug\MasProject.csprojAssemblyReference.cache
+C:\Users\maxvel\Documents\airport\MasProject\MasProject\bin\Debug\MasProject.exe.config
+C:\Users\maxvel\Documents\airport\MasProject\MasProject\bin\Debug\MasProject.exe
+C:\Users\maxvel\Documents\airport\MasProject\MasProject\bin\Debug\MasProject.pdb
+C:\Users\maxvel\Documents\airport\MasProject\MasProject\bin\Debug\Bogus.dll
+C:\Users\maxvel\Documents\airport\MasProject\MasProject\bin\Debug\EntityFramework.dll
+C:\Users\maxvel\Documents\airport\MasProject\MasProject\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\maxvel\Documents\airport\MasProject\MasProject\bin\Debug\Bogus.pdb
+C:\Users\maxvel\Documents\airport\MasProject\MasProject\bin\Debug\Bogus.xml
+C:\Users\maxvel\Documents\airport\MasProject\MasProject\bin\Debug\EntityFramework.xml
+C:\Users\maxvel\Documents\airport\MasProject\MasProject\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\maxvel\Documents\airport\MasProject\MasProject\obj\Debug\MasProject.csprojAssemblyReference.cache
+C:\Users\maxvel\Documents\airport\MasProject\MasProject\obj\Debug\MasProject.csproj.CoreCompileInputs.cache
+C:\Users\maxvel\Documents\airport\MasProject\MasProject\obj\Debug\MasProject.csproj.CopyComplete
+C:\Users\maxvel\Documents\airport\MasProject\MasProject\obj\Debug\MasProject.exe
+C:\Users\maxvel\Documents\airport\MasProject\MasProject\obj\Debug\MasProject.pdb

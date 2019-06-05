@@ -28,3 +28,18 @@ D:\Rider Projects\MasProject\MasProject.DAL\obj\Debug\MasProject.DAL.csproj.Copy
 D:\Rider Projects\MasProject\MasProject.DAL\obj\Debug\MasProject.DAL.exe
 D:\Rider Projects\MasProject\MasProject.DAL\obj\Debug\MasProject.DAL.pdb
 D:\Rider Projects\MasProject\MasProject.DAL\obj\Debug\MasProject.DAL.csprojAssemblyReference.cache
+C:\Users\maxvel\Documents\airport\MasProject\MasProject.DAL\bin\Debug\MasProject.DAL.exe.config
+C:\Users\maxvel\Documents\airport\MasProject\MasProject.DAL\bin\Debug\MasProject.DAL.exe
+C:\Users\maxvel\Documents\airport\MasProject\MasProject.DAL\bin\Debug\MasProject.DAL.pdb
+C:\Users\maxvel\Documents\airport\MasProject\MasProject.DAL\bin\Debug\Bogus.dll
+C:\Users\maxvel\Documents\airport\MasProject\MasProject.DAL\bin\Debug\EntityFramework.dll
+C:\Users\maxvel\Documents\airport\MasProject\MasProject.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\maxvel\Documents\airport\MasProject\MasProject.DAL\bin\Debug\Bogus.pdb
+C:\Users\maxvel\Documents\airport\MasProject\MasProject.DAL\bin\Debug\Bogus.xml
+C:\Users\maxvel\Documents\airport\MasProject\MasProject.DAL\bin\Debug\EntityFramework.xml
+C:\Users\maxvel\Documents\airport\MasProject\MasProject.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\maxvel\Documents\airport\MasProject\MasProject.DAL\obj\Debug\MasProject.DAL.csprojAssemblyReference.cache
+C:\Users\maxvel\Documents\airport\MasProject\MasProject.DAL\obj\Debug\MasProject.DAL.csproj.CoreCompileInputs.cache
+C:\Users\maxvel\Documents\airport\MasProject\MasProject.DAL\obj\Debug\MasProject.DAL.csproj.CopyComplete
+C:\Users\maxvel\Documents\airport\MasProject\MasProject.DAL\obj\Debug\MasProject.DAL.exe
+C:\Users\maxvel\Documents\airport\MasProject\MasProject.DAL\obj\Debug\MasProject.DAL.pdb

@@ -64,7 +64,6 @@
     <Compile Include="Models\IdentificationDocument.cs" />
     <Compile Include="Models\Luggage.cs" />
     <Compile Include="Models\Passenger.cs" />
-    <Compile Include="Models\PassengerReservation.cs" />
     <Compile Include="Models\Person.cs" />
     <Compile Include="Models\Pilot.cs" />
     <Compile Include="Models\Plane.cs" />

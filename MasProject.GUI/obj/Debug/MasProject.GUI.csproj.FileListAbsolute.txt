@@ -25,3 +25,30 @@ D:\Rider Projects\MasProject\MasProject.GUI\obj\Debug\MasProject.GUI.AddReservat
 D:\Rider Projects\MasProject\MasProject.GUI\obj\Debug\MasProject.GUI.FlightsForm.resources
 D:\Rider Projects\MasProject\MasProject.GUI\obj\Debug\MasProject.GUI.AddPassengerForm.resources
 D:\Rider Projects\MasProject\MasProject.GUI\obj\Debug\MasProject.GUI.AssignedPassengersForm.resources
+C:\Users\maxvel\Documents\airport\MasProject\MasProject.GUI\bin\Debug\MasProject.GUI.exe.config
+C:\Users\maxvel\Documents\airport\MasProject\MasProject.GUI\bin\Debug\MasProject.GUI.exe
+C:\Users\maxvel\Documents\airport\MasProject\MasProject.GUI\bin\Debug\MasProject.GUI.pdb
+C:\Users\maxvel\Documents\airport\MasProject\MasProject.GUI\bin\Debug\EntityFramework.dll
+C:\Users\maxvel\Documents\airport\MasProject\MasProject.GUI\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\maxvel\Documents\airport\MasProject\MasProject.GUI\bin\Debug\MasProject.DAL.exe
+C:\Users\maxvel\Documents\airport\MasProject\MasProject.GUI\bin\Debug\Bogus.dll
+C:\Users\maxvel\Documents\airport\MasProject\MasProject.GUI\bin\Debug\MasProject.DAL.pdb
+C:\Users\maxvel\Documents\airport\MasProject\MasProject.GUI\bin\Debug\MasProject.DAL.exe.config
+C:\Users\maxvel\Documents\airport\MasProject\MasProject.GUI\bin\Debug\EntityFramework.xml
+C:\Users\maxvel\Documents\airport\MasProject\MasProject.GUI\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\maxvel\Documents\airport\MasProject\MasProject.GUI\bin\Debug\Bogus.pdb
+C:\Users\maxvel\Documents\airport\MasProject\MasProject.GUI\bin\Debug\Bogus.xml
+C:\Users\maxvel\Documents\airport\MasProject\MasProject.GUI\obj\Debug\MasProject.GUI.csprojAssemblyReference.cache
+C:\Users\maxvel\Documents\airport\MasProject\MasProject.GUI\obj\Debug\MasProject.GUI.AddPassengerForm.resources
+C:\Users\maxvel\Documents\airport\MasProject\MasProject.GUI\obj\Debug\MasProject.GUI.AssignedPassengersForm.resources
+C:\Users\maxvel\Documents\airport\MasProject\MasProject.GUI\obj\Debug\MasProject.GUI.AddReservationForm.resources
+C:\Users\maxvel\Documents\airport\MasProject\MasProject.GUI\obj\Debug\MasProject.GUI.FlightsForm.resources
+C:\Users\maxvel\Documents\airport\MasProject\MasProject.GUI\obj\Debug\MasProject.GUI.LogInForm.resources
+C:\Users\maxvel\Documents\airport\MasProject\MasProject.GUI\obj\Debug\MasProject.GUI.WelcomeForm.resources
+C:\Users\maxvel\Documents\airport\MasProject\MasProject.GUI\obj\Debug\MasProject.GUI.MainForm.resources
+C:\Users\maxvel\Documents\airport\MasProject\MasProject.GUI\obj\Debug\MasProject.GUI.Properties.Resources.resources
+C:\Users\maxvel\Documents\airport\MasProject\MasProject.GUI\obj\Debug\MasProject.GUI.csproj.GenerateResource.cache
+C:\Users\maxvel\Documents\airport\MasProject\MasProject.GUI\obj\Debug\MasProject.GUI.csproj.CoreCompileInputs.cache
+C:\Users\maxvel\Documents\airport\MasProject\MasProject.GUI\obj\Debug\MasProject.GUI.csproj.CopyComplete
+C:\Users\maxvel\Documents\airport\MasProject\MasProject.GUI\obj\Debug\MasProject.GUI.exe
+C:\Users\maxvel\Documents\airport\MasProject\MasProject.GUI\obj\Debug\MasProject.GUI.pdb

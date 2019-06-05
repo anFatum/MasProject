@@ -10,6 +10,6 @@ namespace MasProject.DAL.Models
         [Required] public IdentificationDocument IdentificationDocument { get; set; }
         [Required] public virtual Person Person { get; set; }
         
-        public ICollection<PassengerReservation> PassengerReservations { get; set; }
+        public ICollection<Reservation> Reservations { get; set; }
     }
 }

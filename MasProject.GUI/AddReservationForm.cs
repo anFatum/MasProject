@@ -23,8 +23,7 @@ namespace MasProject.GUI
             {
                 DateOfReservation = DateTime.Now,
                 UserId = user.UserId,
-                ReservationState = ReservationState.InProgress,
-                PassengerReservations = new HashSet<PassengerReservation>()
+                ReservationState = ReservationState.InProgress
             };
             reservationTypeComboBox.DataSource = Enum.GetValues(typeof(ReservationType));
         }

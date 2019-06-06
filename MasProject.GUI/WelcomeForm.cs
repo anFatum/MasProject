@@ -40,5 +40,10 @@ namespace MasProject.GUI
             form.Show();
             this.Hide();
         }
+
+        private void SignUpButton_Click(object sender, EventArgs e)
+        {
+            new SignupForm().ShowDialog();
+        }
     }
 }

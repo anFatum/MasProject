@@ -37,7 +37,7 @@ namespace MasProject.DAL.Models
         public User User { get; set; }
         public Flight Flight { get; set; }
 
-        public virtual ICollection<PassengerReservation> PassengerReservations { get; set; }
+        public virtual ICollection<Passenger> Passengers { get; set; }
         public virtual ICollection<Luggage> Luggage { get; set; }
     }
 }

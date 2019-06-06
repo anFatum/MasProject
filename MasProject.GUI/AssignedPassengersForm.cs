@@ -11,19 +11,19 @@ namespace MasProject.GUI
     {
         private Reservation _reservation;
         private List<PassengerPersonModel> _passengers;
-        private AddReservationForm _form;
 
-        public AssignedPassengersForm(Reservation reservation, AddReservationForm parent)
+        public AssignedPassengersForm(Reservation reservation)
         {
             InitializeComponent();
             _reservation = reservation;
-            _form = parent;
             Init();
         }
 
         private void Init()
         {
             pssgsView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            if (_reservation.ReservationState != ReservationState.InProgress)
+                addButton.Enabled = false;
             RefreshData();
         }
 
@@ -34,7 +34,6 @@ namespace MasProject.GUI
 
         private void cancelButton_Click(object sender, EventArgs e)
         {
-            _form.SetPassengersNumberText();
             Close();
         }
 

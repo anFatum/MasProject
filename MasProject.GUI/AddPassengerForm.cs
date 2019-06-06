@@ -45,7 +45,7 @@ namespace MasProject.GUI
             };
             var personId = DatabaseHelper.AddPerson(person);
             var passengerId = DatabaseHelper.AddPassenger(documentId, personId);
-            DatabaseHelper.AddPassengerToReservation(_reservation, passengerId);
+            DatabaseHelper.AddPassengerToReservation(_reservation.ReservationId, passengerId);
             _reservation = DatabaseHelper.GetReservationById(_reservation.ReservationId);
             _form.RefreshData();
             Close();

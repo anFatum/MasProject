@@ -41,28 +41,28 @@
             this.orderByComboBox = new System.Windows.Forms.ComboBox();
             this.orderByLabel = new System.Windows.Forms.Label();
             this.reservationsView = new System.Windows.Forms.DataGridView();
+            this.flightNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateOfReservationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.reservationTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.reservationStateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuReservations = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.showFlightDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showPassengersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showLuggageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.payForAReservationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.continueReservationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reservationUserModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mainPanel = new System.Windows.Forms.Panel();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.flightNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateOfReservationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.reservationUserModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.reservationTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.reservationStateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.controlPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.reservationsView)).BeginInit();
             this.contextMenuReservations.SuspendLayout();
-            this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.reservationUserModelBindingSource)).BeginInit();
+            this.mainPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // welcomeBackLabel
@@ -99,9 +99,9 @@
             this.controlPanel.Controls.Add(this.orderByComboBox);
             this.controlPanel.Controls.Add(this.orderByLabel);
             this.controlPanel.Location = new System.Drawing.Point(820, 16);
-            this.controlPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.controlPanel.Margin = new System.Windows.Forms.Padding(4);
             this.controlPanel.Name = "controlPanel";
-            this.controlPanel.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.controlPanel.Padding = new System.Windows.Forms.Padding(4);
             this.controlPanel.Size = new System.Drawing.Size(231, 523);
             this.controlPanel.TabIndex = 3;
             this.controlPanel.TabStop = false;
@@ -112,7 +112,7 @@
             this.logoutButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.logoutButton.Location = new System.Drawing.Point(28, 474);
-            this.logoutButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.logoutButton.Margin = new System.Windows.Forms.Padding(4);
             this.logoutButton.Name = "logoutButton";
             this.logoutButton.Size = new System.Drawing.Size(179, 28);
             this.logoutButton.TabIndex = 6;
@@ -123,7 +123,7 @@
             // addButton
             // 
             this.addButton.Location = new System.Drawing.Point(28, 206);
-            this.addButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addButton.Margin = new System.Windows.Forms.Padding(4);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(179, 28);
             this.addButton.TabIndex = 5;
@@ -134,7 +134,7 @@
             // filterButton
             // 
             this.filterButton.Location = new System.Drawing.Point(28, 170);
-            this.filterButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.filterButton.Margin = new System.Windows.Forms.Padding(4);
             this.filterButton.Name = "filterButton";
             this.filterButton.Size = new System.Drawing.Size(179, 28);
             this.filterButton.TabIndex = 4;
@@ -146,7 +146,7 @@
             // 
             this.stateComboBox.FormattingEnabled = true;
             this.stateComboBox.Location = new System.Drawing.Point(28, 126);
-            this.stateComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.stateComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.stateComboBox.Name = "stateComboBox";
             this.stateComboBox.Size = new System.Drawing.Size(177, 24);
             this.stateComboBox.TabIndex = 3;
@@ -165,7 +165,7 @@
             // 
             this.orderByComboBox.FormattingEnabled = true;
             this.orderByComboBox.Location = new System.Drawing.Point(28, 59);
-            this.orderByComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.orderByComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.orderByComboBox.Name = "orderByComboBox";
             this.orderByComboBox.Size = new System.Drawing.Size(177, 24);
             this.orderByComboBox.TabIndex = 1;
@@ -197,7 +197,7 @@
             this.reservationsView.DataSource = this.reservationUserModelBindingSource;
             this.reservationsView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.reservationsView.Location = new System.Drawing.Point(21, 73);
-            this.reservationsView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.reservationsView.Margin = new System.Windows.Forms.Padding(4);
             this.reservationsView.MultiSelect = false;
             this.reservationsView.Name = "reservationsView";
             this.reservationsView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -205,74 +205,6 @@
             this.reservationsView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.reservationsView.Size = new System.Drawing.Size(771, 466);
             this.reservationsView.TabIndex = 4;
-            // 
-            // contextMenuReservations
-            // 
-            this.contextMenuReservations.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuReservations.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.showFlightDetailsToolStripMenuItem,
-            this.showPassengersToolStripMenuItem,
-            this.showLuggageToolStripMenuItem,
-            this.payForAReservationToolStripMenuItem,
-            this.continueReservationToolStripMenuItem});
-            this.contextMenuReservations.Name = "contextMenuReservations";
-            this.contextMenuReservations.Size = new System.Drawing.Size(215, 124);
-            this.contextMenuReservations.Opening += new System.ComponentModel.CancelEventHandler(this.ContextMenuReservations_Opening);
-            // 
-            // showFlightDetailsToolStripMenuItem
-            // 
-            this.showFlightDetailsToolStripMenuItem.Name = "showFlightDetailsToolStripMenuItem";
-            this.showFlightDetailsToolStripMenuItem.Size = new System.Drawing.Size(214, 24);
-            this.showFlightDetailsToolStripMenuItem.Text = "Show flight details";
-            // 
-            // showPassengersToolStripMenuItem
-            // 
-            this.showPassengersToolStripMenuItem.Name = "showPassengersToolStripMenuItem";
-            this.showPassengersToolStripMenuItem.Size = new System.Drawing.Size(214, 24);
-            this.showPassengersToolStripMenuItem.Text = "Show passengers";
-            // 
-            // showLuggageToolStripMenuItem
-            // 
-            this.showLuggageToolStripMenuItem.Name = "showLuggageToolStripMenuItem";
-            this.showLuggageToolStripMenuItem.Size = new System.Drawing.Size(214, 24);
-            this.showLuggageToolStripMenuItem.Text = "Show luggage";
-            // 
-            // payForAReservationToolStripMenuItem
-            // 
-            this.payForAReservationToolStripMenuItem.Name = "payForAReservationToolStripMenuItem";
-            this.payForAReservationToolStripMenuItem.Size = new System.Drawing.Size(214, 24);
-            this.payForAReservationToolStripMenuItem.Text = "Pay for a reservation";
-            // 
-            // continueReservationToolStripMenuItem
-            // 
-            this.continueReservationToolStripMenuItem.Name = "continueReservationToolStripMenuItem";
-            this.continueReservationToolStripMenuItem.Size = new System.Drawing.Size(214, 24);
-            this.continueReservationToolStripMenuItem.Text = "Continue reservation";
-            // 
-            // mainPanel
-            // 
-            this.mainPanel.Controls.Add(this.reservationsView);
-            this.mainPanel.Controls.Add(this.controlPanel);
-            this.mainPanel.Controls.Add(this.welcomeBackLabel);
-            this.mainPanel.Controls.Add(this.stateReservations);
-            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanel.Location = new System.Drawing.Point(0, 0);
-            this.mainPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1067, 554);
-            this.mainPanel.TabIndex = 5;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ReservationType";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ReservationType";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "ReservationState";
-            this.dataGridViewTextBoxColumn2.HeaderText = "ReservationState";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // flightNumberDataGridViewTextBoxColumn
             // 
@@ -292,9 +224,90 @@
             this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
             this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
             // 
+            // reservationTypeDataGridViewTextBoxColumn
+            // 
+            this.reservationTypeDataGridViewTextBoxColumn.DataPropertyName = "ReservationType";
+            this.reservationTypeDataGridViewTextBoxColumn.HeaderText = "ReservationType";
+            this.reservationTypeDataGridViewTextBoxColumn.Name = "reservationTypeDataGridViewTextBoxColumn";
+            // 
+            // reservationStateDataGridViewTextBoxColumn
+            // 
+            this.reservationStateDataGridViewTextBoxColumn.DataPropertyName = "ReservationState";
+            this.reservationStateDataGridViewTextBoxColumn.HeaderText = "ReservationState";
+            this.reservationStateDataGridViewTextBoxColumn.Name = "reservationStateDataGridViewTextBoxColumn";
+            // 
+            // contextMenuReservations
+            // 
+            this.contextMenuReservations.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuReservations.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showFlightDetailsToolStripMenuItem,
+            this.showPassengersToolStripMenuItem,
+            this.showLuggageToolStripMenuItem,
+            this.payForAReservationToolStripMenuItem,
+            this.continueReservationToolStripMenuItem});
+            this.contextMenuReservations.Name = "contextMenuReservations";
+            this.contextMenuReservations.Size = new System.Drawing.Size(215, 152);
+            this.contextMenuReservations.Opening += new System.ComponentModel.CancelEventHandler(this.ContextMenuReservations_Opening);
+            // 
+            // showFlightDetailsToolStripMenuItem
+            // 
+            this.showFlightDetailsToolStripMenuItem.Name = "showFlightDetailsToolStripMenuItem";
+            this.showFlightDetailsToolStripMenuItem.Size = new System.Drawing.Size(214, 24);
+            this.showFlightDetailsToolStripMenuItem.Text = "Show flight details";
+            // 
+            // showPassengersToolStripMenuItem
+            // 
+            this.showPassengersToolStripMenuItem.Name = "showPassengersToolStripMenuItem";
+            this.showPassengersToolStripMenuItem.Size = new System.Drawing.Size(214, 24);
+            this.showPassengersToolStripMenuItem.Text = "Show passengers";
+            this.showPassengersToolStripMenuItem.Click += new System.EventHandler(this.showPassengersToolStripMenuItem_Click);
+            // 
+            // showLuggageToolStripMenuItem
+            // 
+            this.showLuggageToolStripMenuItem.Name = "showLuggageToolStripMenuItem";
+            this.showLuggageToolStripMenuItem.Size = new System.Drawing.Size(214, 24);
+            this.showLuggageToolStripMenuItem.Text = "Show luggage";
+            // 
+            // payForAReservationToolStripMenuItem
+            // 
+            this.payForAReservationToolStripMenuItem.Name = "payForAReservationToolStripMenuItem";
+            this.payForAReservationToolStripMenuItem.Size = new System.Drawing.Size(214, 24);
+            this.payForAReservationToolStripMenuItem.Text = "Pay for a reservation";
+            // 
+            // continueReservationToolStripMenuItem
+            // 
+            this.continueReservationToolStripMenuItem.Name = "continueReservationToolStripMenuItem";
+            this.continueReservationToolStripMenuItem.Size = new System.Drawing.Size(214, 24);
+            this.continueReservationToolStripMenuItem.Text = "Continue reservation";
+            // 
             // reservationUserModelBindingSource
             // 
             this.reservationUserModelBindingSource.DataSource = typeof(MasProject.GUI.Models.ReservationUserModel);
+            // 
+            // mainPanel
+            // 
+            this.mainPanel.Controls.Add(this.reservationsView);
+            this.mainPanel.Controls.Add(this.controlPanel);
+            this.mainPanel.Controls.Add(this.welcomeBackLabel);
+            this.mainPanel.Controls.Add(this.stateReservations);
+            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainPanel.Location = new System.Drawing.Point(0, 0);
+            this.mainPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(1067, 554);
+            this.mainPanel.TabIndex = 5;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ReservationType";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ReservationType";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "ReservationState";
+            this.dataGridViewTextBoxColumn2.HeaderText = "ReservationState";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -308,25 +321,13 @@
             this.dataGridViewTextBoxColumn4.HeaderText = "ReservationState";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
-            // reservationTypeDataGridViewTextBoxColumn
-            // 
-            this.reservationTypeDataGridViewTextBoxColumn.DataPropertyName = "ReservationType";
-            this.reservationTypeDataGridViewTextBoxColumn.HeaderText = "ReservationType";
-            this.reservationTypeDataGridViewTextBoxColumn.Name = "reservationTypeDataGridViewTextBoxColumn";
-            // 
-            // reservationStateDataGridViewTextBoxColumn
-            // 
-            this.reservationStateDataGridViewTextBoxColumn.DataPropertyName = "ReservationState";
-            this.reservationStateDataGridViewTextBoxColumn.HeaderText = "ReservationState";
-            this.reservationStateDataGridViewTextBoxColumn.Name = "reservationStateDataGridViewTextBoxColumn";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.mainPanel);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(855, 390);
             this.Name = "MainForm";
             this.Text = "Airport reservation system";
@@ -335,9 +336,9 @@
             this.controlPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.reservationsView)).EndInit();
             this.contextMenuReservations.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.reservationUserModelBindingSource)).EndInit();
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.reservationUserModelBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

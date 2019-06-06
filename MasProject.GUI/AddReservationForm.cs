@@ -23,8 +23,7 @@ namespace MasProject.GUI
             {
                 DateOfReservation = DateTime.Now,
                 UserId = user.UserId,
-                ReservationState = ReservationState.InProgress,
-                PassengerReservations = new HashSet<PassengerReservation>()
+                ReservationState = ReservationState.InProgress
             };
             reservationTypeComboBox.DataSource = Enum.GetValues(typeof(ReservationType));
         }
@@ -37,7 +36,8 @@ namespace MasProject.GUI
 
         public void SetPassengersNumberText()
         {
-            psgNumberText.Text = DatabaseHelper.GetPassangersForReservation(_reservation.ReservationId).Count.ToString();
+            psgNumberText.Text =
+                DatabaseHelper.GetPassangersForReservation(_reservation.ReservationId).Count.ToString();
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
@@ -59,6 +59,8 @@ namespace MasProject.GUI
             price += double.Parse(psgNumberText.Text) * 350.0;
             priceText.Text = price.ToString(CultureInfo.CurrentCulture);
             _reservation.Price = price;
+            if (_reservation.ReservationId != 0)
+                DatabaseHelper.SetPriceToReservation(_reservation.ReservationId, double.Parse(priceText.Text));
         }
 
         private void FlightNumberText_TextChanged(object sender, EventArgs e)
@@ -81,7 +83,9 @@ namespace MasProject.GUI
                 {
                     //
                 }
-                new AssignedPassengersForm(_reservation, this).ShowDialog();
+
+                new AssignedPassengersForm(_reservation).ShowDialog();
+                SetPassengersNumberText();
             }
         }
 
@@ -104,7 +108,15 @@ namespace MasProject.GUI
                 MessageBox.Show(@"Reservation successfuly created", @"Success", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
             }
+
             Close();
+        }
+
+        private void reservationTypeComboBox_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (!Enum.TryParse(reservationTypeComboBox.SelectedItem.ToString(), out ReservationType reservationType)) return;
+            if (_reservation.ReservationId != 0)
+                DatabaseHelper.SetTypeToReservation(_reservation.ReservationId, reservationType);
         }
     }
 }

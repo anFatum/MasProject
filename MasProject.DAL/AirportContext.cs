@@ -20,7 +20,6 @@ namespace MasProject.DAL
         public DbSet<IdentificationDocument> IdentificationDocuments { get; set; }
         public DbSet<Luggage> Luggage { get; set; }
         public DbSet<Passenger> Passengers { get; set; }
-        public DbSet<PassengerReservation> PassengerReservations { get; set; }
         public DbSet<Person> Persons { get; set; }
         public DbSet<Pilot> Pilots { get; set; }
         public DbSet<Plane> Planes { get; set; }
@@ -34,9 +33,7 @@ namespace MasProject.DAL
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             #region Primary Keys Constraints
-
-            modelBuilder.Entity<PassengerReservation>()
-                .HasKey(pr => new {pr.ReservationId, pr.PassengerId});
+            
             modelBuilder.Entity<FlightStaff>()
                 .HasKey(staff => new {staff.FlightId, staff.StaffId});
 
@@ -56,15 +53,15 @@ namespace MasProject.DAL
                 .HasOptional(p => p.Staff)
                 .WithRequired(ps => ps.Person);
 
-            modelBuilder.Entity<PassengerReservation>()
-                .HasRequired(pr => pr.Passenger)
-                .WithMany(p => p.PassengerReservations)
-                .HasForeignKey(pr => pr.PassengerId);
-
-            modelBuilder.Entity<PassengerReservation>()
-                .HasRequired(pr => pr.Reservation)
-                .WithMany(p => p.PassengerReservations)
-                .HasForeignKey(pr => pr.ReservationId);
+            modelBuilder.Entity<Reservation>()
+                .HasMany(r => r.Passengers)
+                .WithMany(pr => pr.Reservations)
+                .Map(cs =>
+                {
+                    cs.MapLeftKey("ReservationRefId");
+                    cs.MapRightKey("PassengerRefId");
+                    cs.ToTable("PassengerReservation");
+                });
 
             modelBuilder.Entity<Reservation>()
                 .HasMany(r => r.Luggage)
@@ -104,9 +101,9 @@ namespace MasProject.DAL
                 .HasIndex(user => user.Email)
                 .IsUnique();
 
-            modelBuilder.Entity<IdentificationDocument>()
-                .HasIndex(doc => doc.DocumentNumber)
-                .IsUnique();
+//            modelBuilder.Entity<IdentificationDocument>()
+//                .HasIndex(doc => doc.DocumentNumber)
+//                .IsUnique();
 
             modelBuilder.Entity<RegularCustomerCard>()
                 .HasIndex(card => card.CardNumber)

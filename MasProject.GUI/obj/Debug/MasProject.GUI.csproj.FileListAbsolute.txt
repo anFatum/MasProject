@@ -12,6 +12,10 @@ D:\Rider Projects\MasProject\MasProject.GUI\bin\Debug\EntityFramework.SqlServer.
 D:\Rider Projects\MasProject\MasProject.GUI\bin\Debug\Bogus.pdb
 D:\Rider Projects\MasProject\MasProject.GUI\bin\Debug\Bogus.xml
 D:\Rider Projects\MasProject\MasProject.GUI\obj\Debug\MasProject.GUI.csprojAssemblyReference.cache
+D:\Rider Projects\MasProject\MasProject.GUI\obj\Debug\MasProject.GUI.AddPassengerForm.resources
+D:\Rider Projects\MasProject\MasProject.GUI\obj\Debug\MasProject.GUI.AssignedPassengersForm.resources
+D:\Rider Projects\MasProject\MasProject.GUI\obj\Debug\MasProject.GUI.AddReservationForm.resources
+D:\Rider Projects\MasProject\MasProject.GUI\obj\Debug\MasProject.GUI.FlightsForm.resources
 D:\Rider Projects\MasProject\MasProject.GUI\obj\Debug\MasProject.GUI.LogInForm.resources
 D:\Rider Projects\MasProject\MasProject.GUI\obj\Debug\MasProject.GUI.WelcomeForm.resources
 D:\Rider Projects\MasProject\MasProject.GUI\obj\Debug\MasProject.GUI.MainForm.resources
@@ -21,7 +25,3 @@ D:\Rider Projects\MasProject\MasProject.GUI\obj\Debug\MasProject.GUI.csproj.Core
 D:\Rider Projects\MasProject\MasProject.GUI\obj\Debug\MasProject.GUI.csproj.CopyComplete
 D:\Rider Projects\MasProject\MasProject.GUI\obj\Debug\MasProject.GUI.exe
 D:\Rider Projects\MasProject\MasProject.GUI\obj\Debug\MasProject.GUI.pdb
-D:\Rider Projects\MasProject\MasProject.GUI\obj\Debug\MasProject.GUI.AddReservationForm.resources
-D:\Rider Projects\MasProject\MasProject.GUI\obj\Debug\MasProject.GUI.FlightsForm.resources
-D:\Rider Projects\MasProject\MasProject.GUI\obj\Debug\MasProject.GUI.AddPassengerForm.resources
-D:\Rider Projects\MasProject\MasProject.GUI\obj\Debug\MasProject.GUI.AssignedPassengersForm.resources

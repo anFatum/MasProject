@@ -13,6 +13,7 @@ namespace MasProject.GUI
         private User _user;
         private WelcomeForm _form;
         private ICollection<ReservationUserModel> _reservations;
+
         public MainForm(User user, WelcomeForm form)
         {
             _user = user;
@@ -44,8 +45,9 @@ namespace MasProject.GUI
             else
             {
                 newReservations = DatabaseHelper.GetReservationsForUser(_user);
-                stateReservations.Text = "All your reservations";;
+                stateReservations.Text = "All your reservations";
             }
+
             foreach (var reservation in newReservations)
             {
                 _reservations.Add(new ReservationUserModel
@@ -57,7 +59,9 @@ namespace MasProject.GUI
                     Price = reservation.Price
                 });
             }
-            _reservations = _reservations.OrderBy(c => c.GetType().GetProperty(columnToSort).GetValue(c, null)).ToList();
+
+            _reservations = _reservations.OrderBy(c => c.GetType().GetProperty(columnToSort).GetValue(c, null))
+                .ToList();
             reservationsView.DataSource = _reservations;
         }
 
@@ -103,6 +107,14 @@ namespace MasProject.GUI
         {
             new AddReservationForm(_user).ShowDialog();
             RefreshData();
+        }
+
+        private void showPassengersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var reservationDate = _reservations.ElementAt(reservationsView.CurrentCell.RowIndex).DateOfReservation;
+            var reservation = DatabaseHelper.GetReservations().Where(r => r.UserId == _user.UserId)
+                .First(r => r.DateOfReservation.Equals(reservationDate));
+            new AssignedPassengersForm(reservation).ShowDialog();
         }
     }
 }

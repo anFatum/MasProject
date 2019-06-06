@@ -77,6 +77,7 @@ namespace MasProject.GUI
             this.signUpButton.TabIndex = 1;
             this.signUpButton.Text = "Sign Up";
             this.signUpButton.UseVisualStyleBackColor = true;
+            this.signUpButton.Click += new System.EventHandler(this.SignUpButton_Click);
             // 
             // loginButton
             // 

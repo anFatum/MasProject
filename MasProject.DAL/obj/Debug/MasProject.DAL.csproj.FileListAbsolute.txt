@@ -1,18 +1,3 @@
-/Users/andud/RiderProjects/MasProject/MasProject.DAL/bin/Debug/MasProject.DAL.exe.config
-/Users/andud/RiderProjects/MasProject/MasProject.DAL/bin/Debug/MasProject.DAL.exe
-/Users/andud/RiderProjects/MasProject/MasProject.DAL/bin/Debug/MasProject.DAL.pdb
-/Users/andud/RiderProjects/MasProject/MasProject.DAL/bin/Debug/EntityFramework.dll
-/Users/andud/RiderProjects/MasProject/MasProject.DAL/bin/Debug/EntityFramework.SqlServer.dll
-/Users/andud/RiderProjects/MasProject/MasProject.DAL/bin/Debug/EntityFramework.xml
-/Users/andud/RiderProjects/MasProject/MasProject.DAL/bin/Debug/EntityFramework.SqlServer.xml
-/Users/andud/RiderProjects/MasProject/MasProject.DAL/obj/Debug/MasProject.DAL.csproj.CoreCompileInputs.cache
-/Users/andud/RiderProjects/MasProject/MasProject.DAL/obj/Debug/MasProject.DAL.csproj.CopyComplete
-/Users/andud/RiderProjects/MasProject/MasProject.DAL/obj/Debug/MasProject.DAL.exe
-/Users/andud/RiderProjects/MasProject/MasProject.DAL/obj/Debug/MasProject.DAL.pdb
-/Users/andud/RiderProjects/MasProject/MasProject.DAL/obj/Debug/MasProject.DAL.csprojAssemblyReference.cache
-/Users/andud/RiderProjects/MasProject/MasProject.DAL/bin/Debug/Bogus.dll
-/Users/andud/RiderProjects/MasProject/MasProject.DAL/bin/Debug/Bogus.pdb
-/Users/andud/RiderProjects/MasProject/MasProject.DAL/bin/Debug/Bogus.xml
 D:\Rider Projects\MasProject\MasProject.DAL\bin\Debug\MasProject.DAL.exe.config
 D:\Rider Projects\MasProject\MasProject.DAL\bin\Debug\MasProject.DAL.exe
 D:\Rider Projects\MasProject\MasProject.DAL\bin\Debug\MasProject.DAL.pdb
@@ -27,4 +12,3 @@ D:\Rider Projects\MasProject\MasProject.DAL\obj\Debug\MasProject.DAL.csproj.Core
 D:\Rider Projects\MasProject\MasProject.DAL\obj\Debug\MasProject.DAL.csproj.CopyComplete
 D:\Rider Projects\MasProject\MasProject.DAL\obj\Debug\MasProject.DAL.exe
 D:\Rider Projects\MasProject\MasProject.DAL\obj\Debug\MasProject.DAL.pdb
-D:\Rider Projects\MasProject\MasProject.DAL\obj\Debug\MasProject.DAL.csprojAssemblyReference.cache

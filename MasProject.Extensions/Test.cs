@@ -16,7 +16,7 @@ namespace MasProject.Extensions
                 ReservationState = 0,
                 FlightId = 1
             };
-            DatabaseHelper.AddOrUpdateReservation(reservation);
+           // DatabaseHelper.AddOrUpdateReservation(reservation);
             reservation.SetType(ReservationType.VIP);
         }
     }

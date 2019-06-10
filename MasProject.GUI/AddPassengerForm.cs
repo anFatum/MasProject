@@ -43,10 +43,17 @@ namespace MasProject.GUI
                 FirstName = firstNameTextField.Text,
                 LastName = lastNameTextField.Text
             };
-//            var personId = DatabaseHelper.AddPerson(person);
+            //            var personId = DatabaseHelper.AddPerson(person);
             //var passengerId = DatabaseHelper.AddPassenger(documentId, personId);
-//            DatabaseHelper.AddPassengerToReservation(_reservation.ReservationId, passengerId);
-//            _reservation = DatabaseHelper.GetReservationById(_reservation.ReservationId);
+            //            DatabaseHelper.AddPassengerToReservation(_reservation.ReservationId, passengerId);
+            //            _reservation = DatabaseHelper.GetReservationById(_reservation.ReservationId);
+
+            var passenger = new Passenger
+            {
+                Person = person,
+                IdentificationDocument = idDoc
+            };
+            _reservation.Passengers.Add(passenger);
             _form.RefreshData();
             Close();
         }

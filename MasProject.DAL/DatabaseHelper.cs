@@ -95,6 +95,8 @@ namespace MasProject.DAL
                     .Include(r => r.User)
                     .Include(r => r.Luggage)
                     .Include(r => r.Passengers)
+                    .Include(r => r.Passengers.Select(p => p.Person))
+                    .Include(r => r.Passengers.Select(p => p.IdentificationDocument))
                     .ToList();
                 return reservations;
             }
@@ -134,18 +136,19 @@ namespace MasProject.DAL
             }
         }
 
-        public static void AddOrUpdateReservation(Reservation reservation)
+        public static void AddOrUpdateReservation(Reservation reservation, User user)
         {
             using (var context = new AirportContext())
             {
                 if (!context.Reservations.Any(r => r.ReservationId == reservation.ReservationId))
                 {
-                    context.Reservations.Add(reservation);
+                    context.Users.First(u => u.UserId == user.UserId).Reservations.Add(reservation);
+                    //context.Reservations.Add(reservation);
                 }
 
                 context.SaveChanges();
-                reservation.User = GetUsers().First(u => u.UserId == reservation.UserId);
-                reservation.Flight = GetFlights().First(f => f.FlightId == reservation.FlightId);
+               // reservation.User = GetUsers().First(u => u.UserId == reservation.UserId);
+               // reservation.Flight = GetFlights().First(f => f.FlightId == reservation.FlightId);
             }
         }
 

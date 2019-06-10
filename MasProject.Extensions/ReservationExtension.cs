@@ -34,11 +34,11 @@ namespace MasProject.Extensions
 //            {
 //                var updateReservation =
 //                    context.Reservations.FirstOrDefault(r => r.ReservationId == reservation.ReservationId);
-                var price = reservation.Flight == null ? 0.0 : 1505.0;
+                var price = reservation.FlightId == 0 ? 0.0 : 1505.0;
                 price += reservation.Passengers.Count * 215.0;
                 price += reservation.Luggage.Count * 105.5;
                 reservation.Price = price;
-                reservation.Price = price;
+               // reservation.Price = price;
 //                context.SaveChanges();
 //            }
         }

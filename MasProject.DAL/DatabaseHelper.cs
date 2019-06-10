@@ -54,7 +54,8 @@ namespace MasProject.DAL
         {
             using (var context = new AirportContext())
             {
-                var reservations = GetReservationsForUser(user).Where(reservation => reservation.ReservationState == reservationState)
+                var reservations = GetReservationsForUser(user)
+                    .Where(reservation => reservation.ReservationState == reservationState)
                     .ToList();
                 return reservations;
             }
@@ -170,20 +171,13 @@ namespace MasProject.DAL
             return person.PersonId;
         }
 
-        public static int AddPassenger(int documentId, int personId)
+        public static int AddPassenger(int documentId, Passenger passenger)
         {
-            Passenger passenger;
             using (var context = new AirportContext())
             {
                 var identificationDoc =
                     context.IdentificationDocuments.First(id => id.IdentificationDocumentId == documentId);
-                var person =
-                    context.Persons.First(pers => pers.PersonId == personId);
-                passenger = new Passenger
-                {
-                    IdentificationDocument = identificationDoc,
-                    Person = person
-                };
+                
                 context.Passengers.Add(passenger);
                 context.SaveChanges();
             }
@@ -191,18 +185,18 @@ namespace MasProject.DAL
             return passenger.PassengerId;
         }
 
-        public static void AddPassengerToReservation(int reservationId, int passengerId)
+        public static void AddPassengerToReservation(int reservationId, Passenger passenger)
         {
             using (var context = new AirportContext())
             {
-                var passenger = context.Passengers
-                    .Include(p => p.Person)
-                    .Include(p => p.IdentificationDocument)
-                    .First(p => p.PassengerId == passengerId);
-
-                context.Reservations.First(r => r.ReservationId == reservationId)
-                    .Passengers.Add(passenger);
-                context.SaveChanges();
+//                var passenger = context.Passengers
+//                    .Include(p => p.Person)
+//                    .Include(p => p.IdentificationDocument)
+//                    .First(p => p.PassengerId == passengerId);
+//
+//                context.Reservations.First(r => r.ReservationId == reservationId)
+//                    .Passengers.Add(passenger);
+//                context.SaveChanges();
             }
         }
 
@@ -223,16 +217,6 @@ namespace MasProject.DAL
                 }
             }
         }
-        public static void SetStateToReservation(int reservationId, ReservationState state)
-        {
-            using (var context = new AirportContext())
-            {
-                context.Reservations
-                    .FirstOrDefault(r => r.ReservationId == reservationId)
-                    .ReservationState = state;
-                context.SaveChanges();
-            }
-        }
 
         public static void SetPriceToReservation(int reservationId, double price)
         {
@@ -244,17 +228,5 @@ namespace MasProject.DAL
                 context.SaveChanges();
             }
         }
-
-        public static void SetTypeToReservation(int reservationId, ReservationType type)
-        {
-            using (var context = new AirportContext())
-            {
-                context.Reservations
-                    .FirstOrDefault(r => r.ReservationId == reservationId)
-                    .ReservationType = type;
-                context.SaveChanges();
-            }
-        }
-
     }
 }

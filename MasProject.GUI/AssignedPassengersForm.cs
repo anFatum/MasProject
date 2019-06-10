@@ -40,7 +40,7 @@ namespace MasProject.GUI
         public void RefreshData()
         {
             _passengers = new List<PassengerPersonModel>();
-            foreach (var passenger in DatabaseHelper.GetPassangersForReservation(_reservation.ReservationId))
+            foreach (var passenger in DatabaseHelper.GetPassengersForReservation(_reservation.ReservationId))
             {
                 var pass = new PassengerPersonModel
                 {

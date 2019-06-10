@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasProject.DAL", "MasProjec
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasProject.GUI", "MasProject.GUI\MasProject.GUI.csproj", "{44BD90F7-591A-420D-AAA0-2ED6D4F9E050}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasProject.Extensions", "MasProject.Extensions\MasProject.Extensions.csproj", "{E85644D8-9D45-4A1F-A7E2-D1BE66CDBCBD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{44BD90F7-591A-420D-AAA0-2ED6D4F9E050}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44BD90F7-591A-420D-AAA0-2ED6D4F9E050}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44BD90F7-591A-420D-AAA0-2ED6D4F9E050}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E85644D8-9D45-4A1F-A7E2-D1BE66CDBCBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E85644D8-9D45-4A1F-A7E2-D1BE66CDBCBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E85644D8-9D45-4A1F-A7E2-D1BE66CDBCBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E85644D8-9D45-4A1F-A7E2-D1BE66CDBCBD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

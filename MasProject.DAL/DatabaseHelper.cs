@@ -14,7 +14,7 @@ namespace MasProject.DAL
             User user;
             using (var context = new AirportContext())
             {
-                user = context.Users.Where(u => u.Email.ToLower().Equals(email.ToLower())).FirstOrDefault();
+                user = context.Users.FirstOrDefault(u => u.Email.ToLower().Equals(email.ToLower()));
                 if (user == null)
                     throw new Exception("User not found");
                 if (!user.Password.Equals(password))
@@ -118,7 +118,7 @@ namespace MasProject.DAL
             }
         }
 
-        public static ICollection<Passenger> GetPassangersForReservation(int reservationId)
+        public static ICollection<Passenger> GetPassengersForReservation(int reservationId)
         {
             using (var context = new AirportContext())
             {
@@ -137,7 +137,7 @@ namespace MasProject.DAL
         {
             using (var context = new AirportContext())
             {
-                if (context.Entry(reservation).State == EntityState.Detached)
+                if (!context.Reservations.Any(r => r.ReservationId == reservation.ReservationId))
                 {
                     context.Reservations.Add(reservation);
                 }

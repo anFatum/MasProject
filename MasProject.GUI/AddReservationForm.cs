@@ -4,6 +4,7 @@ using System.Globalization;
 using System.Windows.Forms;
 using MasProject.DAL;
 using MasProject.DAL.Models;
+using MasProject.Extensions;
 
 namespace MasProject.GUI
 {
@@ -34,10 +35,10 @@ namespace MasProject.GUI
             flightNumberText.Text = flight.FlightNumber;
         }
 
-        public void SetPassengersNumberText()
+        private void SetPassengersNumberText()
         {
             psgNumberText.Text =
-                DatabaseHelper.GetPassangersForReservation(_reservation.ReservationId).Count.ToString();
+                DatabaseHelper.GetPassengersForReservation(_reservation.ReservationId).Count.ToString();
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
@@ -105,7 +106,7 @@ namespace MasProject.GUI
             else
             {
                 DatabaseHelper.SetStateToReservation(_reservation.ReservationId, ReservationState.WaitingForPayment);
-                MessageBox.Show(@"Reservation successfuly created", @"Success", MessageBoxButtons.OK,
+                MessageBox.Show(@"Reservation successfully created", @"Success", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
             }
 
@@ -116,7 +117,7 @@ namespace MasProject.GUI
         {
             if (!Enum.TryParse(reservationTypeComboBox.SelectedItem.ToString(), out ReservationType reservationType)) return;
             if (_reservation.ReservationId != 0)
-                DatabaseHelper.SetTypeToReservation(_reservation.ReservationId, reservationType);
+                _reservation.SetReservationType(reservationType);
         }
     }
 }

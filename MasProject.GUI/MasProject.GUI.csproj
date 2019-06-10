@@ -158,6 +158,10 @@
       <Project>{1e8514c7-5c7c-4119-9004-5e27d1fdb93a}</Project>
       <Name>MasProject.DAL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MasProject.Extensions\MasProject.Extensions.csproj">
+      <Project>{e85644d8-9d45-4a1f-a7e2-d1be66cdbcbd}</Project>
+      <Name>MasProject.Extensions</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

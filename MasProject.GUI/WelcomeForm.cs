@@ -35,15 +35,13 @@ namespace MasProject.GUI
         public void LogInUser(User user)
         {
             var form = new MainForm(user, this);
-            //form.FormClosed += (s, args) => this.Close();
-            //form.Hide
             form.Show();
             this.Hide();
         }
 
         private void SignUpButton_Click(object sender, EventArgs e)
         {
-            new SignupForm().ShowDialog();
+            new SignupForm(this).ShowDialog();
         }
     }
 }

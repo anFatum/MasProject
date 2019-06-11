@@ -2,25 +2,41 @@
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
-using System.Data.Entity.Migrations;
 using System.Linq;
 
 namespace MasProject.DAL
 {
     public static class DatabaseHelper
     {
+
+        public static void AddUser(User user)
+        {
+            using (var context = new AirportContext())
+            {
+                context.Users.Add(user);
+                context.SaveChanges();
+            }
+        }
+
         public static User LoginUser(string email, string password)
         {
             User user;
             using (var context = new AirportContext())
             {
-                user = context.Users.FirstOrDefault(u => u.Email.ToLower().Equals(email.ToLower()));
+                user = context.Users
+                    .Include(u => u.Reservations)
+                    .Include(u => u.Person)
+                    .Include(u => u.Person.Passenger)
+                    .Include(u => u.Person.Passenger.IdentificationDocument)
+                    .Include(u => u.Reservations.Select(r => r.Flight))
+                    .Include(u => u.Reservations.Select(r => r.Passengers))
+                    .Include(u => u.Reservations.Select(r => r.Passengers.Select(p => p.Person)))
+                    .Include(u => u.Reservations.Select(r => r.Passengers.Select(p => p.IdentificationDocument)))
+                    .FirstOrDefault(u => u.Email.ToLower().Equals(email.ToLower()));
                 if (user == null)
                     throw new Exception("User not found");
                 if (!user.Password.Equals(password))
                     throw new Exception("Invalid password");
-                context.Entry(user).Reference(u => u.Person).Load();
-                context.Entry(user).Collection(u => u.Reservations).Load();
             }
 
             return user;
@@ -102,17 +118,6 @@ namespace MasProject.DAL
             }
         }
 
-        public static void UpdatePrice(int reservationId, double price)
-        {
-            using (var context = new AirportContext())
-            {
-                var reservations = context.Reservations
-                    .First(r => r.ReservationId == reservationId);
-                reservations.Price = price;
-                context.SaveChanges();
-            }
-        }
-
         public static Reservation GetReservationById(int reservationId)
         {
             using (var context = new AirportContext())
@@ -136,70 +141,31 @@ namespace MasProject.DAL
             }
         }
 
+        public static void UpdateUser(Person user, Passenger passenger)
+        {
+            using (var context = new AirportContext())
+            {
+                context.Passengers.Add(passenger);
+                context.Persons.Attach(user);
+                user.Passenger = passenger;
+                context.SaveChanges();
+            }
+        }
+
         public static void AddOrUpdateReservation(Reservation reservation, User user)
         {
             using (var context = new AirportContext())
             {
                 if (!context.Reservations.Any(r => r.ReservationId == reservation.ReservationId))
                 {
+                    var flight = reservation.Flight;
+                    reservation.Flight = null;
                     context.Users.First(u => u.UserId == user.UserId).Reservations.Add(reservation);
-                    //context.Reservations.Add(reservation);
+                    context.Flights.First(f => f.FlightId == flight.FlightId).Reservations.Add(reservation);
+                    user.Reservations.Add(reservation);
                 }
 
                 context.SaveChanges();
-               // reservation.User = GetUsers().First(u => u.UserId == reservation.UserId);
-               // reservation.Flight = GetFlights().First(f => f.FlightId == reservation.FlightId);
-            }
-        }
-
-        public static int AddIdentificationDocument(IdentificationDocument document)
-        {
-            using (var context = new AirportContext())
-            {
-                context.IdentificationDocuments.Add(document);
-                context.SaveChanges();
-            }
-
-            return document.IdentificationDocumentId;
-        }
-
-        public static int AddPerson(Person person)
-        {
-            using (var context = new AirportContext())
-            {
-                context.Persons.Add(person);
-                context.SaveChanges();
-            }
-
-            return person.PersonId;
-        }
-
-        public static int AddPassenger(int documentId, Passenger passenger)
-        {
-            using (var context = new AirportContext())
-            {
-                var identificationDoc =
-                    context.IdentificationDocuments.First(id => id.IdentificationDocumentId == documentId);
-                
-                context.Passengers.Add(passenger);
-                context.SaveChanges();
-            }
-
-            return passenger.PassengerId;
-        }
-
-        public static void AddPassengerToReservation(int reservationId, Passenger passenger)
-        {
-            using (var context = new AirportContext())
-            {
-//                var passenger = context.Passengers
-//                    .Include(p => p.Person)
-//                    .Include(p => p.IdentificationDocument)
-//                    .First(p => p.PassengerId == passengerId);
-//
-//                context.Reservations.First(r => r.ReservationId == reservationId)
-//                    .Passengers.Add(passenger);
-//                context.SaveChanges();
             }
         }
 
@@ -218,17 +184,6 @@ namespace MasProject.DAL
                 {
                     return false;
                 }
-            }
-        }
-
-        public static void SetPriceToReservation(int reservationId, double price)
-        {
-            using (var context = new AirportContext())
-            {
-                context.Reservations
-                    .FirstOrDefault(r => r.ReservationId == reservationId)
-                    .Price = price;
-                context.SaveChanges();
             }
         }
     }

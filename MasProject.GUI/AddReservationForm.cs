@@ -25,7 +25,6 @@ namespace MasProject.GUI
             _reservation = reservation ?? new Reservation
             {
                 DateOfReservation = DateTime.Now,
-                //UserId = user.UserId,
                 ReservationState = ReservationState.InProgress,
                 Passengers = new HashSet<Passenger>(),
                 Luggage = new HashSet<Luggage>()
@@ -35,20 +34,17 @@ namespace MasProject.GUI
 
         public void SetFlight(Flight flight)
         {
-            _reservation.FlightId = flight.FlightId;
+            _reservation.Flight = flight;
             flightNumberText.Text = flight.FlightNumber;
         }
 
         private void SetPassengersNumberText()
         {
             psgNumberText.Text = _reservation.Passengers.Count.ToString();
-//                DatabaseHelper.GetPassengersForReservation(_reservation.ReservationId).Count.ToString();
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
-//            if (psgNumberText.Text.Equals("0"))
-//                DatabaseHelper.DeleteReservation(_reservation);
             Close();
         }
 
@@ -59,8 +55,7 @@ namespace MasProject.GUI
 
         private void RecalculatePrice()
         {
-            //if (_reservation.ReservationId != 0)
-                _reservation.SetPrice();
+            _reservation.SetPrice();
             priceText.Text = _reservation.Price.ToString(CultureInfo.CurrentCulture);
         }
 
@@ -71,8 +66,8 @@ namespace MasProject.GUI
 
         private void addPsgButton_Click(object sender, EventArgs e)
         {
-                new AssignedPassengersForm(_reservation).ShowDialog();
-                SetPassengersNumberText();
+            new AssignedPassengersForm(_reservation, _user).ShowDialog();
+            SetPassengersNumberText();
         }
 
         private void PsgNumberText_TextChanged(object sender, EventArgs e)
@@ -86,7 +81,6 @@ namespace MasProject.GUI
             {
                 MessageBox.Show(@"You should add passengers to proceed to payment", @"Warning", MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
-//                DatabaseHelper.AddOrUpdateReservation(_reservation);
             }
             else
             {
@@ -94,6 +88,7 @@ namespace MasProject.GUI
                 MessageBox.Show(@"Reservation successfully created", @"Success", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
             }
+
             DatabaseHelper.AddOrUpdateReservation(_reservation, _user);
             Close();
         }
@@ -102,8 +97,7 @@ namespace MasProject.GUI
         {
             if (!Enum.TryParse(reservationTypeComboBox.SelectedItem.ToString(),
                 out ReservationType reservationType)) return;
-           // if (_reservation.ReservationId != 0)
-                _reservation.ReservationType = reservationType;
+            _reservation.ReservationType = reservationType;
         }
     }
 }

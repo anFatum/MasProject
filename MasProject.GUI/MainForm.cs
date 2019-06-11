@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
-using MasProject.DAL;
 
 namespace MasProject.GUI
 {
@@ -36,19 +35,9 @@ namespace MasProject.GUI
         private void RefreshData(string columnToSort = "DateOfReservation", ReservationState? reservationType = null)
         {
             _reservations = new List<ReservationUserModel>();
-            ICollection<Reservation> newReservations;
-            if (reservationType.HasValue)
-            {
-                newReservations = DatabaseHelper.GetReservationsForUserWithState(_user, reservationType.Value);
-                stateReservations.Text = $"Your {reservationType} reservations";
-            }
-            else
-            {
-                newReservations = DatabaseHelper.GetReservationsForUser(_user);
-                stateReservations.Text = "All your reservations";
-            }
+            stateReservations.Text = reservationType.HasValue ? $"Your {reservationType} reservations" : "All your reservations";
 
-            foreach (var reservation in newReservations)
+            foreach (var reservation in _user.Reservations)
             {
                 _reservations.Add(new ReservationUserModel
                 {
@@ -60,7 +49,7 @@ namespace MasProject.GUI
                 });
             }
 
-            _reservations = _reservations.OrderBy(c => c.GetType().GetProperty(columnToSort).GetValue(c, null))
+            _reservations = _reservations.OrderBy(c => c.GetType().GetProperty(columnToSort)?.GetValue(c, null))
                 .ToList();
             reservationsView.DataSource = _reservations;
         }
@@ -81,8 +70,7 @@ namespace MasProject.GUI
         {
             var columnToSort = orderByComboBox.SelectedItem.ToString();
             var reservationState = stateComboBox.SelectedItem.ToString();
-            ReservationState reservationType;
-            if (Enum.TryParse(reservationState, out reservationType))
+            if (Enum.TryParse(reservationState, out ReservationState reservationType))
                 RefreshData(columnToSort, reservationType);
             else RefreshData(columnToSort, null);
         }
@@ -112,9 +100,9 @@ namespace MasProject.GUI
         private void showPassengersToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var reservationDate = _reservations.ElementAt(reservationsView.CurrentCell.RowIndex).DateOfReservation;
-            var reservation = DatabaseHelper.GetReservations().Where(r => r.UserId == _user.UserId)
+            var reservation = _user.Reservations
                 .First(r => r.DateOfReservation.Equals(reservationDate));
-            new AssignedPassengersForm(reservation).ShowDialog();
+            new AssignedPassengersForm(reservation, _user).ShowDialog();
         }
     }
 }

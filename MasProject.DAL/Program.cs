@@ -1,7 +1,4 @@
-﻿using System;
-using MasProject.DAL.Models;
-
-namespace MasProject.DAL
+﻿namespace MasProject.DAL
 {
     internal class Program
     {

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using MasProject.DAL;
 using MasProject.DAL.Models;
@@ -7,16 +8,30 @@ namespace MasProject.GUI
 {
     public partial class AddPassengerForm : Form
     {
+        private User _user;
         private Reservation _reservation;
-        private AssignedPassengersForm _form;
-        public AddPassengerForm(Reservation reservation, AssignedPassengersForm form)
+
+        public AddPassengerForm(Reservation reservation, User user = null)
         {
-            _form = form;
             _reservation = reservation;
+            _user = user;
             InitializeComponent();
+            Init();
+        }
+
+        private void Init()
+        {
             var today = DateTime.Now;
             dateBirthPicker.MaxDate = new DateTime(today.Year - 18, today.Month, today.Day);
             idTypeComboBox.DataSource = Enum.GetValues(typeof(DocumentType));
+            if (_user == null)
+                return;
+            firstNameTextField.Text = _user.Person.FirstName;
+            firstNameTextField.Enabled = false;
+            lastNameTextField.Text = _user.Person.LastName;
+            lastNameTextField.Enabled = false;
+            dateBirthPicker.Value = _user.Person.DateOfBirth;
+            dateBirthPicker.Enabled = false;
         }
 
         private void cancelButton_Click(object sender, EventArgs e)
@@ -36,25 +51,27 @@ namespace MasProject.GUI
                 ExpirationDate = expireDatePicker.Value,
                 PassportSeries = seriesTextBox.Text
             };
-//            var documentId = DatabaseHelper.AddIdentificationDocument(idDoc);
-            var person = new Person
-            {
-                DateOfBirth = dateBirthPicker.Value,
-                FirstName = firstNameTextField.Text,
-                LastName = lastNameTextField.Text
-            };
-            //            var personId = DatabaseHelper.AddPerson(person);
-            //var passengerId = DatabaseHelper.AddPassenger(documentId, personId);
-            //            DatabaseHelper.AddPassengerToReservation(_reservation.ReservationId, passengerId);
-            //            _reservation = DatabaseHelper.GetReservationById(_reservation.ReservationId);
+            var person = _user == null
+                ? new Person
+                {
+                    DateOfBirth = dateBirthPicker.Value,
+                    FirstName = firstNameTextField.Text,
+                    LastName = lastNameTextField.Text
+                }
+                : _user.Person;
+            person.User = null;
 
             var passenger = new Passenger
             {
                 Person = person,
                 IdentificationDocument = idDoc
             };
+            if (_user != null)
+            {
+//                passenger.Person = null;
+                DatabaseHelper.UpdateUser(_user.Person, passenger);
+            }
             _reservation.Passengers.Add(passenger);
-            _form.RefreshData();
             Close();
         }
     }

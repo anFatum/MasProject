@@ -34,14 +34,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.submitButton = new System.Windows.Forms.Button();
+            this.cancelButton = new System.Windows.Forms.Button();
+            this.firstNameTextBox = new System.Windows.Forms.TextBox();
+            this.lastNameTextBox = new System.Windows.Forms.TextBox();
+            this.dateOfBirthPicker = new System.Windows.Forms.DateTimePicker();
+            this.phoneNumberTextBox = new System.Windows.Forms.TextBox();
+            this.emailTextBox = new System.Windows.Forms.TextBox();
+            this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -104,89 +104,94 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "Password";
             // 
-            // button1
+            // submitButton
             // 
-            this.button1.Location = new System.Drawing.Point(79, 199);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Submit";
-            this.button1.UseVisualStyleBackColor = true;
+            this.submitButton.Location = new System.Drawing.Point(79, 199);
+            this.submitButton.Name = "submitButton";
+            this.submitButton.Size = new System.Drawing.Size(75, 23);
+            this.submitButton.TabIndex = 6;
+            this.submitButton.Text = "Submit";
+            this.submitButton.UseVisualStyleBackColor = true;
+            this.submitButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 
-            // button2
+            // cancelButton
             // 
-            this.button2.Location = new System.Drawing.Point(204, 199);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Cancel";
-            this.button2.UseVisualStyleBackColor = true;
+            this.cancelButton.Location = new System.Drawing.Point(204, 199);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(75, 23);
+            this.cancelButton.TabIndex = 7;
+            this.cancelButton.Text = "Cancel";
+            this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
-            // textBox1
+            // firstNameTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(141, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(209, 20);
-            this.textBox1.TabIndex = 8;
+            this.firstNameTextBox.Location = new System.Drawing.Point(141, 12);
+            this.firstNameTextBox.Name = "firstNameTextBox";
+            this.firstNameTextBox.Size = new System.Drawing.Size(209, 20);
+            this.firstNameTextBox.TabIndex = 8;
             // 
-            // textBox2
+            // lastNameTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(141, 40);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(209, 20);
-            this.textBox2.TabIndex = 9;
+            this.lastNameTextBox.Location = new System.Drawing.Point(141, 40);
+            this.lastNameTextBox.Name = "lastNameTextBox";
+            this.lastNameTextBox.Size = new System.Drawing.Size(209, 20);
+            this.lastNameTextBox.TabIndex = 9;
             // 
-            // dateTimePicker1
+            // dateOfBirthPicker
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(141, 70);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(209, 20);
-            this.dateTimePicker1.TabIndex = 10;
-            this.dateTimePicker1.Value = new System.DateTime(2019, 6, 4, 0, 0, 0, 0);
+            this.dateOfBirthPicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateOfBirthPicker.Location = new System.Drawing.Point(141, 70);
+            this.dateOfBirthPicker.Name = "dateOfBirthPicker";
+            this.dateOfBirthPicker.Size = new System.Drawing.Size(209, 20);
+            this.dateOfBirthPicker.TabIndex = 10;
+            this.dateOfBirthPicker.Value = new System.DateTime(2019, 6, 4, 0, 0, 0, 0);
             // 
-            // textBox3
+            // phoneNumberTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(141, 100);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(209, 20);
-            this.textBox3.TabIndex = 11;
+            this.phoneNumberTextBox.Location = new System.Drawing.Point(141, 100);
+            this.phoneNumberTextBox.Name = "phoneNumberTextBox";
+            this.phoneNumberTextBox.Size = new System.Drawing.Size(209, 20);
+            this.phoneNumberTextBox.TabIndex = 11;
             // 
-            // textBox4
+            // emailTextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(141, 129);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(209, 20);
-            this.textBox4.TabIndex = 12;
+            this.emailTextBox.Location = new System.Drawing.Point(141, 129);
+            this.emailTextBox.Name = "emailTextBox";
+            this.emailTextBox.Size = new System.Drawing.Size(209, 20);
+            this.emailTextBox.TabIndex = 12;
             // 
-            // textBox5
+            // passwordTextBox
             // 
-            this.textBox5.Location = new System.Drawing.Point(141, 157);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(209, 20);
-            this.textBox5.TabIndex = 13;
+            this.passwordTextBox.Location = new System.Drawing.Point(141, 157);
+            this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.Size = new System.Drawing.Size(209, 20);
+            this.passwordTextBox.TabIndex = 13;
+            this.passwordTextBox.UseSystemPasswordChar = true;
             // 
             // SignupForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(362, 234);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(364, 232);
+            this.Controls.Add(this.passwordTextBox);
+            this.Controls.Add(this.emailTextBox);
+            this.Controls.Add(this.phoneNumberTextBox);
+            this.Controls.Add(this.dateOfBirthPicker);
+            this.Controls.Add(this.lastNameTextBox);
+            this.Controls.Add(this.firstNameTextBox);
+            this.Controls.Add(this.cancelButton);
+            this.Controls.Add(this.submitButton);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximumSize = new System.Drawing.Size(380, 270);
+            this.MinimumSize = new System.Drawing.Size(380, 270);
             this.Name = "SignupForm";
-            this.Text = "SignupForm";
+            this.Text = "Sign Up";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,13 +205,13 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Button submitButton;
+        private System.Windows.Forms.Button cancelButton;
+        private System.Windows.Forms.TextBox firstNameTextBox;
+        private System.Windows.Forms.TextBox lastNameTextBox;
+        private System.Windows.Forms.DateTimePicker dateOfBirthPicker;
+        private System.Windows.Forms.TextBox phoneNumberTextBox;
+        private System.Windows.Forms.TextBox emailTextBox;
+        private System.Windows.Forms.TextBox passwordTextBox;
     }
 }

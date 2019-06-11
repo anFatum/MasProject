@@ -1,6 +1,4 @@
 using System;
-using System.Linq;
-using MasProject.DAL;
 using MasProject.DAL.Models;
 
 namespace MasProject.Extensions
@@ -12,12 +10,12 @@ namespace MasProject.Extensions
             var reservation = new Reservation
             {
                 DateOfReservation = DateTime.Now,
-                UserId = 5,//DatabaseHelper.GetUsers().First(u => u.UserId==5)
+                UserId = 5, //DatabaseHelper.GetUsers().First(u => u.UserId==5)
                 ReservationState = 0,
-                FlightId = 1
+                FlightId = 1,
+                ReservationType = ReservationType.VIP
             };
-           // DatabaseHelper.AddOrUpdateReservation(reservation);
-            reservation.SetType(ReservationType.VIP);
+            // DatabaseHelper.AddOrUpdateReservation(reservation);
         }
     }
 }

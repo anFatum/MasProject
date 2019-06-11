@@ -3,19 +3,20 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using MasProject.DAL.Models;
 using MasProject.GUI.Models;
-using MasProject.DAL;
 
 namespace MasProject.GUI
 {
     public partial class AssignedPassengersForm : Form
     {
         private Reservation _reservation;
+        private User _user;
         private List<PassengerPersonModel> _passengers;
 
-        public AssignedPassengersForm(Reservation reservation)
+        public AssignedPassengersForm(Reservation reservation, User user)
         {
             InitializeComponent();
             _reservation = reservation;
+            _user = user;
             Init();
         }
 
@@ -29,7 +30,8 @@ namespace MasProject.GUI
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            new AddPassengerForm(_reservation, this).ShowDialog();
+            new AddPassengerForm(_reservation).ShowDialog();
+            RefreshData();
         }
 
         private void cancelButton_Click(object sender, EventArgs e)
@@ -55,5 +57,22 @@ namespace MasProject.GUI
             pssgsView.DataSource = _passengers;
         }
 
+        private void AddMeButton_Click(object sender, EventArgs e)
+        {
+            if (_user.Person.Passenger == null)
+            {
+                MessageBox.Show(@"You should add your identification document", @"Warning", MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+
+                new AddPassengerForm(_reservation, _user).ShowDialog();
+                RefreshData();
+            }
+            else
+            {
+                _reservation.Passengers.Add(_user.Person.Passenger);
+                RefreshData();
+            }
+                
+        }
     }
 }
